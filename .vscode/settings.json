@@ -5,6 +5,7 @@
     // "nix.serverPath": "nixd", // For expanding
     "editor.fontLigatures": true,
     "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.cursorSmoothCaretAnimation": "on",
     "breadcrumbs.enabled": true,
     "nix.serverSettings": {
         "nil": {
