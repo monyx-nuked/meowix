@@ -1,0 +1,21 @@
+{
+    "nix.enableLanguageServer": true,
+    "nix.formatterPath": "nixfmt",
+    "nix.serverPath": "nil", // For starter
+    // "nix.serverPath": "nixd", // For expanding
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "breadcrumbs.enabled": true,
+    "nix.serverSettings": {
+        "nil": {
+            "formatting": {
+                "command": ["nixfmt"],
+            },
+        },
+        "nixd": {
+            "formatting": {
+                "command": ["nixfmt"],
+            },
+        },
+    },
+}
