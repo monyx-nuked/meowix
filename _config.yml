@@ -1,0 +1,12 @@
+title: "meowix - nixos configuration"
+description: "This is my personal nixos configuration."
+author: "monyx"
+
+theme: jekyll-theme-hacker
+
+show_downloads: false
+
+github:
+  repository-url: "https://github.com/monyx/meowix"
+
+markdown: kramdown
