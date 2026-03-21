@@ -2,9 +2,7 @@
   description = ''
     meowix - nixos configuration w/
         flake-parts and dendritic pattern'';
-  outputs =
-    inputs@{ flake-parts, ... }:
-    flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
+  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
   inputs = {
     # >> BASE <<
     # nixpkgs - latest unstable version
