@@ -16,5 +16,11 @@
     import-tree.url = "github:vic/import-tree";
     # nixpkgs-lib - nixpkgs library
     nixpkgs-lib.url = "github:nix-community/nixpkgs.lib";
+    # nur - nix user repository
+    nur = {
+      url = "github:nix-community/nur";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+    };
   };
 }
