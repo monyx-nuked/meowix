@@ -25,7 +25,7 @@
 <a href="https://github.com/vic/import-tree/">
   <img
     src="https://img.shields.io/badge/vic-%20🌲%20import--tree-informational?logo=nixos&style=for-the-badge&logoColor=blue&labelColor=black"
-    alt="import-tree"
+    alt="🌲 import-tree"
   />
 </a>
 <a href="https://github.com/nix-community/home-manager/">
