@@ -16,6 +16,8 @@ While on NixOS it is easy by just adding a configuration.
 | Lucario      | NixOS       | Gaming, daily drive, Development   |
 | Necrozma     | nix-darwin  | Development and Environment, Apps  |
 
+> More can be seen [hosts](./docs/HOSTS.md)
+
 #### Note taking
 I will use Obsidian for note taking and it is inside [notes](./notes/README.md) directory \
 I will mostly take notes of strange words, topics, systems, etc.
