@@ -16,15 +16,6 @@
       url = "github:numtide/devshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # devenv: substancially of devShells
-    devenv = {
-      url = "github:cachix/devenv";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        flake-parts.follows = "flake-parts";
-        git-hooks.follows = "git-hooks";
-      };
-    };
     # home-manager: manage user configuration with nix
     # version: latest stable version, 0.1 means unstable
     home-manager = {
