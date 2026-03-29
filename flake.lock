@@ -95,6 +95,25 @@
         "type": "github"
       }
     },
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1774738535,
+        "narHash": "sha256-2jfBEZUC67IlnxO5KItFCAd7Oc+1TvyV/jQlR+2ykGQ=",
+        "rev": "769e07ef8f4cf7b1ec3b96ef015abec9bc6b1e2a",
+        "revCount": 6430,
+        "type": "tarball",
+        "url": "https://api.flakehub.com/f/pinned/nix-community/home-manager/0.1.6430%2Brev-769e07ef8f4cf7b1ec3b96ef015abec9bc6b1e2a/019d36aa-1791-7106-908a-3f5a2f791b13/source.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://flakehub.com/f/nix-community/home-manager/0.1"
+      }
+    },
     "import-tree": {
       "locked": {
         "lastModified": 1773693634,
@@ -108,6 +127,25 @@
         "owner": "vic",
         "repo": "import-tree",
         "type": "github"
+      }
+    },
+    "nix-darwin": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1773000227,
+        "narHash": "sha256-zm3ftUQw0MPumYi91HovoGhgyZBlM4o3Zy0LhPNwzXE=",
+        "rev": "da529ac9e46f25ed5616fd634079a5f3c579135f",
+        "revCount": 2339,
+        "type": "tarball",
+        "url": "https://api.flakehub.com/f/pinned/nix-darwin/nix-darwin/0.1.2339%2Brev-da529ac9e46f25ed5616fd634079a5f3c579135f/019ccf20-8385-79ac-9a17-563017c4801d/source.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://flakehub.com/f/nix-darwin/nix-darwin/0.1"
       }
     },
     "nixpkgs": {
@@ -144,7 +182,9 @@
         "devshell": "devshell",
         "flake-parts": "flake-parts",
         "git-hooks": "git-hooks",
+        "home-manager": "home-manager",
         "import-tree": "import-tree",
+        "nix-darwin": "nix-darwin",
         "nixpkgs": "nixpkgs"
       }
     }
