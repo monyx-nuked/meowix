@@ -13,6 +13,20 @@
       url = "github:numtide/devshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # home-manager: manage user configuration with nix
+    # version: latest stable version, 0.1 means unstable
+    home-manager = {
+      url = "https://flakehub.com/f/nix-community/home-manager/0.1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    # nix-darwin: manage macos configuration with nix
+    # version: latest stable version, 0.1 means unstable
+    nix-darwin = {
+      url = "https://flakehub.com/f/nix-darwin/nix-darwin/0.1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    # determinate: better nix package manager
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
     # git-hooks: pre-commit hooks for nix
     git-hooks = {
       url = "https://flakehub.com/f/cachix/git-hooks.nix/*";
