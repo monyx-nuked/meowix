@@ -176,6 +176,14 @@ let
     };
   };
 
+  dotfilesSubmodule = types.submodule {
+    options = {
+      url = mkOption {
+        type = types.nonEmptyStr;
+        description = "URL of the dotfiles repository";
+      };
+    };
+  };
 in
 {
   # TODO: Implement a whole custom module for metadata with type-safe validation
@@ -184,13 +192,28 @@ in
       type = userSubmodule;
       description = "User metadata";
     };
+    dotfiles = mkOption {
+      type = dotfilesSubmodule;
+      description = "Dotfiles repository metadata";
+    };
     hosts = mkOption {
       type = types.listOf hostSubmodule;
       default = [ ];
       description = "List of hosts in this flake";
     };
+    unfree = mkOption {
+      type = types.bool;
+      default = true;
+      description = "Whether this flake contains unfree software";
+    };
   };
   config.flake.meta = {
     inherit user;
+
+    dotfiles = {
+      url = "https://github.com/${user.github.username}/dotfiles";
+    };
+
+    unfree = true;
   };
 }
