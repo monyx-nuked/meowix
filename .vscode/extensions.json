@@ -11,5 +11,6 @@
     "jnoortheen.nix-ide",
     "donjayamanne.githistory",
     "eamodio.gitlens",
+    "elagil.pre-commit-helper",
   ]
 }
