@@ -29,16 +29,168 @@ let
     };
   };
   inherit (lib) mkOption types;
-in
-{
-  # Implement a whole custom module for metadata with type-safe validation
-  config.flake.meta = {
-    user = mkOption {
-      type = types.attrs;
-      default = { };
+
+  githubSubmodule = types.submodule {
+    options = {
+      username = mkOption {
+        type = types.nonEmptyStr;
+        description = "GitHub username.";
+      };
+      repo = mkOption {
+        type = types.nonEmptyStr;
+        description = "Primary GitHub repository name";
+      };
     };
   };
+
+  gpgSubmodule = types.submodule {
+    options = {
+      fingerprint = mkOption {
+        type = types.nullOr types.str;
+        default = null;
+        description = "GPG key fingerprint.";
+      };
+      publicKeyFile = mkOption {
+        type = types.nullOr types.path;
+        default = null;
+        description = "Path to the GPG public key file";
+      };
+    };
+  };
+
+  sshUserSubmodule = types.submodule {
+    options = {
+      authorizedKeysFile = mkOption {
+        type = types.listOf types.str;
+        default = [ ];
+        description = "List of authorized SSH public keys";
+      };
+    };
+  };
+
+  sshHostSubmodule = types.submodule {
+    options = {
+      alias = mkOption {
+        type = types.nullOr types.str;
+        default = null;
+        description = "SSH alias for this host.";
+      };
+      publicKey = mkOption {
+        type = types.nullOr types.str;
+        default = null;
+        description = "SSH public key of the host.";
+      };
+    };
+  };
+
+  avatarSubmodule = types.submodule {
+    options = {
+      source = mkOption {
+        type = types.nullOr types.path;
+        default = null;
+        description = "Path to a local avatar image. If null, fetched from GitHub";
+      };
+      sha256 = mkOption {
+        type = types.str;
+        description = "SHA256 hash of the avatar image";
+      };
+      url = mkOption {
+        type = types.str;
+        description = "URL to fetch the avatar from if source is null";
+      };
+    };
+  };
+
+  userSubmodule = types.submodule {
+    options = {
+      username = mkOption {
+        type = types.nonEmptyStr;
+        description = "System username";
+      };
+      fullName = mkOption {
+        type = types.str;
+        default = "";
+        description = "Display name of the user";
+      };
+      email = mkOption {
+        type = types.nullOr types.str;
+        default = null;
+        description = "User email address";
+      };
+      github = mkOption {
+        type = githubSubmodule;
+        description = "GitHub account metadata";
+      };
+      gpg = mkOption {
+        type = gpgSubmodule;
+        default = { };
+        description = "GPG key metadata";
+      };
+      ssh = mkOption {
+        type = sshUserSubmodule;
+        default = { };
+        description = "SSH configuration";
+      };
+      avatar = mkOption {
+        type = avatarSubmodule;
+        description = "Avatar image configuration";
+      };
+    };
+  };
+
+  networkSubmodule = types.submodule {
+    options = {
+      ip = mkOption {
+        type = types.nullOr types.str;
+        default = null;
+        description = "Host IP address";
+      };
+      ssh = mkOption {
+        type = sshHostSubmodule;
+        default = { };
+        description = "SSH network metadata";
+      };
+    };
+  };
+
+  hostSubmodule = types.submodule {
+    options = {
+      hostname = mkOption {
+        type = types.nonEmptyStr;
+        description = "Hostname of the machine (should match flake id)";
+      };
+      system = mkOption {
+        type = types.nonEmptyStr;
+        description = "Nix system string (e.g. x86_64-linux)";
+      };
+      network = mkOption {
+        type = networkSubmodule;
+        default = { };
+        description = "Network metadata. Fully optional";
+      };
+      extra = mkOption {
+        type = types.attrs;
+        default = { };
+        description = "Extra metadata for this host";
+      };
+    };
+  };
+
+in
+{
+  # TODO: Implement a whole custom module for metadata with type-safe validation
   options.flake.meta = {
+    user = mkOption {
+      type = userSubmodule;
+      description = "User metadata";
+    };
+    hosts = mkOption {
+      type = types.listOf hostSubmodule;
+      default = [ ];
+      description = "List of hosts in this flake";
+    };
+  };
+  config.flake.meta = {
     inherit user;
   };
 }
