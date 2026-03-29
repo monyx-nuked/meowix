@@ -6,6 +6,9 @@ result*
 # Ignore automatically generated direnv output
 .direnv
 
+# Ignore devenv generated files
+.devenv/
+
 # Ignore Obsidian files
 
 # Ignore plugin configuration. Might be useful to prevent some plugin from exposing sensitive data
