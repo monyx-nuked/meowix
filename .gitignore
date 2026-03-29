@@ -10,7 +10,7 @@ result*
 
 # Ignore plugin configuration. Might be useful to prevent some plugin from exposing sensitive data
 .obsidian/plugins
-# Exclude workspace cache 
+# Exclude workspace cache
 .obsidian/workspace.json
 # Exclude mobile-workspace cache
 .obsidian/workspace-mobile.json
