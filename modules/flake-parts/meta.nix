@@ -155,7 +155,7 @@ let
 
   hostSubmodule = types.submodule {
     options = {
-      hostname = mkOption {
+      name = mkOption {
         type = types.nonEmptyStr;
         description = "Hostname of the machine (should match flake id)";
       };
@@ -167,11 +167,6 @@ let
         type = networkSubmodule;
         default = { };
         description = "Network metadata. Fully optional";
-      };
-      extra = mkOption {
-        type = types.attrs;
-        default = { };
-        description = "Extra metadata for this host";
       };
     };
   };
@@ -205,6 +200,11 @@ in
       type = types.bool;
       default = true;
       description = "Whether this flake contains unfree software";
+    };
+    extra = mkOption {
+      type = types.attrs;
+      default = { };
+      description = "Extra metadata for this flake";
     };
   };
   config.flake.meta = {
