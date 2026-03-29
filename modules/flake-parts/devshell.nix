@@ -24,12 +24,9 @@
               enable = true;
               settings.edit = false;
             };
-            actionlint = {
-              enable = true;
-            };
-            shellcheck = {
-              enable = true;
-            };
+            statix.enable = true;
+            actionlint.enable = true;
+            shellcheck.enable = true;
             shfmt = {
               enable = true;
               settings.indent = 2;
