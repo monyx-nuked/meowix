@@ -5,7 +5,10 @@
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
   inputs = {
     # Flake-Parts: framework for writing flakes
-    flake-parts.url = "https://flakehub.com/f/hercules-ci/flake-parts/*";
+    flake-parts = {
+      url = "https://flakehub.com/f/hercules-ci/flake-parts/*";
+      inputs.nixpkgs-lib.follows = "nixpkgs-lib"; # Pin and deduplicate nixpkgs-lib
+    };
     # Import-tree: recursively import nix files from a directory
     import-tree.url = "github:vic/import-tree";
     # devshells: better version of devShells
