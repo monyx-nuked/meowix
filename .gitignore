@@ -18,3 +18,7 @@ result*
 # Exclude OS Settings and caches
 .trash/
 .DS_Store
+
+# Ignore common files that come from nix store
+# Related to this project's environment
+.pre-commit-config.yaml
