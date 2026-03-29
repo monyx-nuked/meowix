@@ -47,6 +47,7 @@ let
           hmodule
           # Import home-manager module specified for the platform
           platform.hmModule
+          platform.determinate
           {
             home-manager = {
               # Bare bones home-manager settings
