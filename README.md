@@ -17,7 +17,7 @@ While on NixOS it is easy by just adding a configuration.
 | Necrozma     | nix-darwin  | Development and Environment, Apps  |
 
 #### Note taking
-I will use Obsidian for note taking and it is inside [obsidian](./obsidian/README.md) directory \
+I will use Obsidian for note taking and it is inside [notes](./notes/README.md) directory \
 I will mostly take notes of strange words, topics, systems, etc.
 By doing this it will help me get into my project faster \
 Rather than forgetting what does the code's functions, variables, workarounds do
