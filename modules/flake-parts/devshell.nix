@@ -20,6 +20,20 @@
               settings.indent = 2;
               args = [ "--verify" ];
             };
+            deadnix = {
+              enable = true;
+              settings.edit = true;
+            };
+            actionlint = {
+              enable = true;
+            };
+            shellcheck = {
+              enable = true;
+            };
+            shfmt = {
+              enable = true;
+              settings.indent = 2;
+            };
           };
         };
       };
