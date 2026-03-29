@@ -5,7 +5,7 @@
   ...
 }:
 let
-  prefix = "host/";
+  prefix = "hosts/";
   defPlatform = {
     nixos = {
       defsystem = "x86_64-linux";
