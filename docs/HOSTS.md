@@ -5,6 +5,6 @@ Table of hosts and thier features, use case, information, etc
 
 | Name        | Type       | Use case                           | Features                                                | Hardware                                 | Status                    |
 |:-----------:|:----------:|:----------------------------------:|:-------------------------------------------------------:|:----------------------------------------:|:--------------------------|
-| Meowscarada | NixOS-WSL  | Development, Environment           | Dev Tools, Minimal preset, Possibly NVIDIA tools        | i7-10870H, RTX 3060 Mobile, Windows 10   |❌                         |
+| Meowscarada | NixOS-WSL  | Development, Environment           | Dev Tools, Minimal preset, Possibly NVIDIA tools        | i7-10870H, RTX 3060 Mobile, Windows 10   |❌ (WIP)                   |
 | Lucario     | NixOS      | Gaming, Daily-driving, Development | Games, Desktop System, Laptop features, Standard preset | i7-10870H, RTX 3060 Mobile, AORUS 15P KC |❌                         |
 | Necrozma    | Nix-Darwin | Apps, Development, Environment     | Dev Tools, Minimal preset, Darwin apps                  | i7-10870H, UHD 630, macOS Sequoia        |❌ (soon to be deprecated) |
