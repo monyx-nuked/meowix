@@ -1,4 +1,4 @@
 # https://conventionalcommits.org
 <type>[optional scope]: <description>
-[optional body]
-[optional footer(s)]
+# [optional body]
+# [optional footer(s)]
