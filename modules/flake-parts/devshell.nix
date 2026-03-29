@@ -22,7 +22,7 @@
             };
             deadnix = {
               enable = true;
-              settings.edit = true;
+              settings.edit = false;
             };
             actionlint = {
               enable = true;
