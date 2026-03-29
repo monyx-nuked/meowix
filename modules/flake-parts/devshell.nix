@@ -55,6 +55,8 @@
           shellcheck # Linter for shell scripts
           shfmt # Formatter for shell scripts
           manix # Options searcher for nix*
+          tree # tree
+          eza # ls replacement
           # TODO: Add devenv and pre-commit hook
         ];
       };
