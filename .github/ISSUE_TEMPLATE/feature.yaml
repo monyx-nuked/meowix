@@ -1,0 +1,46 @@
+name: Feature Request
+description: File a feature request
+title: '[FEATURE] '
+labels: ["feature"]
+type: feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        What feature are you requesting? Please provide a brief description of the feature and its benefits.
+  - type: input
+    id: feature_description
+    attributes:
+      label: Feature Description
+      description: What feature do you want to add/request?
+      placeholder: "Add a new program called x that is better than y"
+    validations:
+      required: true
+  - type: textarea
+    id: use_cases
+    attributes:
+      label: Use Cases
+      description: Please provide benefits for this feature. How would it benefit in practice, what are the side effects?
+      placeholder: "Add a new program called x that is better than y because of z"
+  - type: dropdown
+    id: host_type
+    attributes:
+      label: What host type/OS do you want to add this feature for?
+      description: What host type/OS do you want to add this feature for? If the feature is not OS specific, select "global"
+      options:
+        - NixOS-WSL  | Meowscarada
+        - NixOS-WSL  | Lucario
+        - nix-darwin | Necrozma
+        - global     | Global
+    validations:
+      required: true
+  - type: checkboxes
+    id: extra_info
+    attributes:
+      label: What extra information do you have?
+      required: false
+      options:
+        - This feature is outside nixpkgs
+        - This feature is urgent
+        - This feature requires a lot of work
+        - This feature can be added later
