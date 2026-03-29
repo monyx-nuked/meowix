@@ -8,7 +8,11 @@
           {202}Welcome to the {bold}nix-env!{reset}
         '';
         packages = with pkgs; [
-          statix # A linter
+          statix # Linter
+          nixfmt # Formatter
+          nil # Language server
+          nixd # Another language server
+          deadnix # Scans for dead nix code
         ];
       };
     };
