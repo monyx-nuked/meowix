@@ -1,7 +1,6 @@
-TODO
-----
+# TODO
 
-#### Hosts
+## Hosts
 
 - [ ] Meowscarada - NixOS-WSL
     Development and Environment
@@ -10,7 +9,7 @@ TODO
 - [ ] Necrozma - macOS
     Development and Environment, Apps
 
-#### Setup
+## Setup
 
 - [ ] Basic developer environment setup
     Including more advanced configuration files that help later
@@ -18,7 +17,7 @@ TODO
 - [ ] Flake setup
     Set up a flake and it's inputs, flake.lock too (a.k.a.) lockfile
 
-#### Notes
+## Notes
 
 - [ ] Set up obsidian vault
     Add goodies (plugins, settings, etc.)
