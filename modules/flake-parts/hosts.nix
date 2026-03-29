@@ -30,7 +30,7 @@ let
       platform = defPlatform.${htype};
 
       evalSystem =
-        if (config ? system) && (config.systems != [ ]) then
+        if (config ? systems) && (config.systems != [ ]) then
           let
             isDarwin = sys: lib.hasSuffix "-darwin" sys;
             mSystems = lib.filter (sys: (htype == "darwin") == (isDarwin sys)) config.systems;
