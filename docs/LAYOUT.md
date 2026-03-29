@@ -12,6 +12,6 @@ meowix
 ├── README.md | about this project
 ├── TODO.md | list of todos
 └── .vscode | vscode workspace settings
-    ├── extensions.json | extensions list (recommended in extensions list)
+    ├── extensions.json | extensions list (@recommended in extensions list)
     └── settings.json | settings for workspace
 ```
