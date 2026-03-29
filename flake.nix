@@ -9,7 +9,15 @@
     # Import-tree: recursively import nix files from a directory
     import-tree.url = "github:vic/import-tree";
     # devshells: better version of devShells
-    devshell.url = "github:numtide/devshell";
+    devshell = {
+      url = "github:numtide/devshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    # git-hooks: pre-commit hooks for nix
+    git-hooks = {
+      url = "https://flakehub.com/f/cachix/git-hooks.nix/*";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # Nixpkgs: biggest repository in the distro-world
     # Version: latest unstable version, 0.1 means unstable
     nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1";

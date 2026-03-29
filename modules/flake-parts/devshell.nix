@@ -3,16 +3,34 @@
   imports = [
     # add devshell module
     inputs.devshell.flakeModule
+    # add git-hooks.nix module
+    inputs.git-hooks.flakeModule
   ];
 
   perSystem =
-    { pkgs, ... }:
+    { pkgs, config, ... }:
     {
+      pre-commit = {
+        check.enable = true;
+        settings = {
+          enable = true;
+          hooks = {
+            nixfmt = {
+              enable = true;
+              settings.indent = 2;
+              args = [ "--verify" ];
+            };
+          };
+        };
+      };
       devshells.default = {
-        name = "nix-env";
-        motd = ''
-          {202}{italic}Welcome to the {bold}nix-env!{reset}
-        '';
+        devshell = {
+          name = "nix-env";
+          motd = ''
+            {202}{italic}Welcome to the {bold}nix-env!{reset}
+          '';
+          startup.pre-commit.text = config.pre-commit.shellHook;
+        };
         packages = with pkgs; [
           statix # Linter
           nixfmt # Formatter
