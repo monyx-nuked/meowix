@@ -54,6 +54,11 @@ I do not understand like specific words, (derivations, store path, etc)
 Code's functions such as resolve, resolveHm, resolveDarwin (lib.mapAttrs', etc)
 > So just a small wiki for myself that I collected from resources
 
+#### Layout
+Use layout structure that is written in [LAYOUT](./docs/LAYOUT.md)
+- The file has tree-structure captured of this project and it's description,
+    It maps the project structure so it will be understandable what each parts of the project do
+
 ---------------
 
 #### References
