@@ -1,5 +1,6 @@
 HOSTS
 -----
+
 Table of hosts and thier features, use case, information, etc
 > All of these hosts are commonly one laptop (because I own only one currently)
 
