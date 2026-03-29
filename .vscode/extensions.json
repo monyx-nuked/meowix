@@ -1,1 +1,8 @@
-{}
+{
+  "recommendations": [
+    "jdinhlife.gruvbox",
+    "shd101wyy.markdown-preview-enhanced",
+    "EditorConfig.EditorConfig",
+    "DavidAnson.vscode-markdownlint",
+  ]
+}
