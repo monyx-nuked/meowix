@@ -40,6 +40,11 @@
     nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1";
     # nixpkgs.lib: lib from nixpkgs
     nixpkgs-lib.url = "github:nix-community/nixpkgs.lib";
+    # nixos-wsl: run nixos on wsl
+    nixos-wsl = {
+      url = "github:nix-community/NixOS-WSL";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   nixConfig = {
     extra-trusted-public-keys = [
