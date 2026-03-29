@@ -1,1 +1,15 @@
-{}
+{
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "JetBrainsMono Nerd Font, Consolas, 'Courier New', monospace",
+  "editor.wordWrap": "on",
+  "editor.formatOnPaste": true,
+  "editor.mouseWheelZoom": true,
+  "workbench.activityBar.compact": true,
+  "workbench.sideBar.location": "right",
+  "workbench.panel.defaultLocation": "bottom",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.productIconTheme": "material-product-icons",
+  "terminal.integrated.tabs.defaultIcon": "console",
+  "editor.tabSize": 2,
+  "workbench.colorTheme": "Gruvbox Dark Hard"
+}
