@@ -1,6 +1,6 @@
 {
   "editor.formatOnSave": true,
-  "editor.fontFamily": "JetBrainsMono Nerd Font, Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "VictorMono Nerd Font, JetBrainsMono Nerd Font, Consolas, 'Courier New', monospace",
   "editor.wordWrap": "on",
   "editor.formatOnPaste": true,
   "editor.mouseWheelZoom": true,
