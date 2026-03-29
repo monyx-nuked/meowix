@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, ... }:
 {
   # Helper functions for modules
   # > resolveOS - resolve module names for NixOS
