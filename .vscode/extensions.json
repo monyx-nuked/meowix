@@ -8,6 +8,6 @@
     "pkief.material-product-icons",
     "github.vscode-github-actions",
     "GitHub.vscode-pull-request-github",
-    "jnoortheen.nix-ide"
+    "jnoortheen.nix-ide",
   ]
 }
