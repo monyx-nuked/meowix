@@ -54,6 +54,7 @@
           actionlint # Linter for github actions
           shellcheck # Linter for shell scripts
           shfmt # Formatter for shell scripts
+          manix # Options searcher for nix*
           # TODO: Add devenv and pre-commit hook
         ];
       };
