@@ -15,6 +15,6 @@ result*
 # Exclude mobile-workspace cache
 .obsidian/workspace-mobile.json
 
-# Exlucde OS Settings and caches
+# Exclude OS Settings and caches
 .trash/
 .DS_Store
