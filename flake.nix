@@ -8,6 +8,8 @@
     flake-parts.url = "https://flakehub.com/f/hercules-ci/flake-parts/*";
     # Import-tree: recursively import nix files from a directory
     import-tree.url = "github:vic/import-tree";
+    # devshells: better version of devShells
+    devshell.url = "github:numtide/devshell";
     # Nixpkgs: biggest repository in the distro-world
     # Version: latest unstable version, 0.1 means unstable
     nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1";
