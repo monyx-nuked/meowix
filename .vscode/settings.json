@@ -12,6 +12,17 @@
   "terminal.integrated.tabs.defaultIcon": "console",
   "editor.tabSize": 2,
   "workbench.colorTheme": "Gruvbox Dark Hard",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "comment",
+        "settings": {
+          // Make all comments italic, for VictorMono
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
   "nix.enableLanguageServer": true,
   "nix.serverPath": "nil",
   "nix.serverSettings": {
