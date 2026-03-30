@@ -53,6 +53,11 @@
         flake-parts.follows = "flake-parts";
       };
     };
+    # nix-index-database - weekly updated index database
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   nixConfig = {
     cores = 2; # Use 2 cores maximum for stability

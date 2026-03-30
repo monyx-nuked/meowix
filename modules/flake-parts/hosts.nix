@@ -15,6 +15,7 @@ let
       # as x86_64-darwin for determinate is deprecated
       determinate = inputs.determinate.nixosModules.default;
       nur = inputs.nur.modules.nixos.default;
+      nix-index-db = inputs.nix-index-database.nixosModules.default;
     };
     darwin = {
       defsystem = "x86_64-darwin";
@@ -22,6 +23,7 @@ let
       hmModule = inputs.home-manager.darwinModules.home-manager;
       determinate = { };
       nur = inputs.nur.modules.darwin.default;
+      nix-index-db = inputs.nix-index-database.darwinModules.default;
     };
   };
 
@@ -51,6 +53,7 @@ let
           platform.hmModule
           platform.determinate
           platform.nur
+          platform.nix-index-db
           {
             home-manager = {
               # Bare bones home-manager settings
