@@ -26,6 +26,7 @@ in
         imports = config.flake.lib.resolveHm [
           # Home Manager preset modules
           "users"
+          "applications/direnv"
         ];
       };
       wsl.enable = true;
