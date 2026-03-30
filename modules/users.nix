@@ -10,7 +10,7 @@ in
         users.users.${config.flake.meta.user.username} = {
           isNormalUser = lib.mkForce true;
           description = lib.mkForce config.flake.meta.user.fullName;
-          openssh.authorizedKeys.keys = lib.mkForce config.flake.meta.user.ssh.sshPublicKeys;
+          openssh.authorizedKeys.keys = config.flake.meta.user.ssh.sshPublicKeys;
           extraGroups = [
             "wheel"
             "networkmanager"
