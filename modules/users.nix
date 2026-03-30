@@ -1,4 +1,4 @@
-{ config, ... }:
+{ inputs, config, ... }:
 let
   moduleName = "users";
 in
@@ -35,7 +35,10 @@ in
           inherit (config.flake.meta.user) username;
           homeDirectory = lib.mkDefault "/home/${config.flake.meta.user.username}";
           stateVersion = "25.11";
-
+          # Add nix-index-database to homeManager
+          imports = [
+            inputs.nix-index-database.homeModules.default
+          ];
           # Link avatar to .face for display managers
           file.".face".source = avatarFile;
         };

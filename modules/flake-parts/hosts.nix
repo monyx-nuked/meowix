@@ -59,10 +59,6 @@ let
               # Bare bones home-manager settings
               useGlobalPkgs = true;
               useUserPackages = true;
-              # Add nix-index-database to homeManager
-              imports = [
-                inputs.nix-index-database.homeModules.default
-              ];
             };
           }
           {
