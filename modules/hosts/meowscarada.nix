@@ -16,6 +16,7 @@ in
         "core/i18n"
         "core/nh"
         "core/timezone"
+        "core/extras"
         inputs.nixos-wsl.nixosModules.default
       ];
       # Home Manager configuration for user
