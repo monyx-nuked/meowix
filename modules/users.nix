@@ -1,4 +1,4 @@
-{ inputs, config, ... }:
+{ config, ... }:
 let
   moduleName = "users";
 in
@@ -36,9 +36,10 @@ in
           homeDirectory = lib.mkDefault "/home/${config.flake.meta.user.username}";
           stateVersion = "25.11";
           # Add nix-index-database to homeManager
-          imports = [
-            inputs.nix-index-database.homeModules.default
-          ];
+          # # TODO: Add to preset as here doesn't work cuz trust
+          # imports = [
+          #   inputs.nix-index-database.homeModules.default
+          # ];
           # Link avatar to .face for display managers
           file.".face".source = avatarFile;
         };
