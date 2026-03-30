@@ -30,6 +30,7 @@ in
       };
       wsl.enable = true;
       wsl.defaultUser = config.flake.meta.user.username;
+      networking.hostName = hostMeta.name;
       system.stateVersion = "25.11";
     };
   };
