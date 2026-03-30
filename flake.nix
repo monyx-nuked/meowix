@@ -58,6 +58,10 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # disko - declarative disk partitioning
+    disko = {
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   nixConfig = {
     cores = 2; # Use 2 cores maximum for stability
