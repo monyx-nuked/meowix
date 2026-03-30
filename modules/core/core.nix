@@ -36,7 +36,7 @@ let
   sharedHomeManager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    backupFileExtensions = "hm-bak";
+    backupFileExtension = "hm-bak";
     overwriteBackup = true;
   };
 in
