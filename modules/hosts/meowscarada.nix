@@ -27,6 +27,7 @@ in
           # Home Manager preset modules
           "users"
           "applications/direnv"
+          "applications/gemini"
           inputs.nix-index-database.homeModules.default
         ];
       };
