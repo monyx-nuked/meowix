@@ -11,7 +11,11 @@ in
     meta.hosts = [ hostMeta ];
     modules.nixos."hosts/meowscarada" = {
       imports = config.flake.lib.resolveOS [
-        "dummy"
+        "users"
+        "core/core"
+        "core/i18n"
+        "core/nh"
+        "core/timezone"
         inputs.nixos-wsl.nixosModules.default
       ];
       # Home Manager configuration for user
