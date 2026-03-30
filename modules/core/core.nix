@@ -95,8 +95,8 @@ in
         optimise.automatic = true;
       };
       programs.git = {
-        enable = true;
-        lfs.enable = true;
+        enable = lib.mkDefault true;
+        lfs.enable = lib.mkDefault true;
       };
       home-manager = sharedHomeManager;
     };
