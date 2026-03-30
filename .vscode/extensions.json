@@ -12,5 +12,6 @@
     "donjayamanne.githistory",
     "eamodio.gitlens",
     "elagil.pre-commit-helper",
+    "mkhl.direnv",
   ]
 }
