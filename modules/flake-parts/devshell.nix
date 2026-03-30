@@ -54,6 +54,7 @@
           manix # Options searcher for nix*
           tree # tree
           eza # ls replacement
+          direnv # direnv for vscode
           # TODO: Add devenv and pre-commit hook
         ];
       };
