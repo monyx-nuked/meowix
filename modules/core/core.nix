@@ -16,6 +16,8 @@ let
       "nix-command"
       "flakes"
     ];
+    # Accept to install flake config instantly (CHECK FOR SUPPLY CHAIN ATTACK IF POSSIBLE)
+    accept-flake-config = true;
   };
 
   sharedNix = lib.mkMerge [
