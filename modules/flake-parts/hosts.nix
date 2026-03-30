@@ -14,12 +14,14 @@ let
       # Enable determinate package manager for nixos only
       # as x86_64-darwin for determinate is deprecated
       determinate = inputs.determinate.nixosModules.default;
+      nur = inputs.nur.modules.nixos.default;
     };
     darwin = {
       defsystem = "x86_64-darwin";
       builder = inputs.nix-darwin.lib.darwinSystem;
       hmModule = inputs.home-manager.darwinModules.home-manager;
       determinate = { };
+      nur = inputs.nur.modules.darwin.default;
     };
   };
 
@@ -48,6 +50,7 @@ let
           # Import home-manager module specified for the platform
           platform.hmModule
           platform.determinate
+          platform.nur
           {
             home-manager = {
               # Bare bones home-manager settings
