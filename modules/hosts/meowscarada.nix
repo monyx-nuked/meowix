@@ -14,7 +14,18 @@ in
         "dummy"
         inputs.nixos-wsl.nixosModules.default
       ];
+      # Home Manager configuration for user
+      home-manager.users.${config.flake.meta.user.username} = {
+        home.stateVersion = "25.11";
+
+        # Home Manager modules (cross-platform)
+        imports = config.flake.lib.resolveHm [
+          # Home Manager preset modules
+          "users"
+        ];
+      };
       wsl.enable = true;
+      wsl.defaultUser = config.flake.meta.user.username;
       system.stateVersion = "25.11";
     };
   };
