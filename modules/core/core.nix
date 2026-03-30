@@ -69,6 +69,10 @@ in
         gc.automatic = false;
         optimise.automatic = true;
       };
+      programs.git = {
+        enable = true;
+        lfs.enable = true;
+      };
       home-manager = sharedHomeManager;
     };
     darwin.${moduleName} = {
@@ -87,6 +91,10 @@ in
         # nh will handle this
         gc.automatic = false;
         optimise.automatic = true;
+      };
+      programs.git = {
+        enable = true;
+        lfs.enable = true;
       };
       home-manager = sharedHomeManager;
     };
