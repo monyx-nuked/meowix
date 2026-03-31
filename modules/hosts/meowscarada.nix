@@ -34,6 +34,10 @@ in
           inputs.catppuccin.homeManagerModules.catppuccin # Try catppuccin for myself and temporary not enable as a core
         ];
       };
+      catpuccin = {
+        accent = "sapphire";
+        enable = true;
+      };
       wsl.enable = true;
       wsl.defaultUser = config.flake.meta.user.username;
       networking.hostName = hostMeta.name;
