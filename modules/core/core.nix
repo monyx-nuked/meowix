@@ -56,8 +56,6 @@ in
       # Disable NetworkManager-wait-online - most systems don't need to block boot for network
       # This saves ~5 seconds during boot
       systemd.network.wait-online.enable = false;
-      # Switch backend to better one
-      networking.networkmanager.wifi.backend = "iwd";
       # Enable ~/.local/bin in PATH for user-installed binaries (e.g. uv tools)
       environment.localBinInPath = true;
       # Enable unfree packages
