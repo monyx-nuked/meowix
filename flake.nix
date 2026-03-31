@@ -69,19 +69,4 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  nixConfig = {
-    cores = 2; # Use 2 cores maximum for stability
-    extra-trusted-public-keys = [
-      "cache.flakehub.com-3:hJuILl5sVK4iKm86JzgdXW12Y2Hwd5G07qKtHTOcDCM="
-      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-      "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
-      "cachix.cachix.org-1:eWNHQldwUO7G2VkjpnjDbWwy4KQ/HNxht7H4SSoMckM="
-    ];
-    extra-substituters = [
-      "https://install.determinate.systems"
-      "https://nix-community.cachix.org"
-      "https://devenv.cachix.org"
-      "https://cachix.cachix.org"
-    ];
-  };
 }
