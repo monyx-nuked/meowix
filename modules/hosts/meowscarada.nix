@@ -38,6 +38,7 @@ in
             accent = "sapphire";
             enable = true;
           };
+          programs.fastfetch.enable = true;
         };
         catppuccin = {
           accent = "sapphire";
