@@ -31,7 +31,7 @@ in
           "applications/direnv"
           "applications/gemini"
           inputs.nix-index-database.homeModules.default
-          inputs.catppuccin.homeModules.catppuccin # Try catppuccin for myself and temporary not enable as a core
+          inputs.catppuccin.homeManagerModules.catppuccin # Try catppuccin for myself and temporary not enable as a core
         ];
       };
       wsl.enable = true;
