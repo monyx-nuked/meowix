@@ -18,6 +18,7 @@ in
         "core/timezone"
         "core/perf"
         inputs.nixos-wsl.nixosModules.default
+        inputs.catppuccin.nixosModules.catppuccin # Try catppuccin for myself and temporary not enable as a core
       ];
       # Home Manager configuration for user
       home-manager.users.${config.flake.meta.user.username} = {
@@ -30,6 +31,7 @@ in
           "applications/direnv"
           "applications/gemini"
           inputs.nix-index-database.homeModules.default
+          inputs.catppuccin.homeModules.catppuccin # Try catppuccin for myself and temporary not enable as a core
         ];
       };
       wsl.enable = true;
