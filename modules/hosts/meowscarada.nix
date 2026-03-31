@@ -34,7 +34,7 @@ in
           inputs.catppuccin.homeManagerModules.catppuccin # Try catppuccin for myself and temporary not enable as a core
         ];
       };
-      catpuccin = {
+      catppuccin = {
         accent = "sapphire";
         enable = true;
       };
