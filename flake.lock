@@ -1,5 +1,19 @@
 {
   "nodes": {
+    "catpuccin": {
+      "locked": {
+        "lastModified": 1734734291,
+        "narHash": "sha256-CFX4diEQHKvZYjnhf7TLg20m3ge1O4vqgplsk/Kuaek=",
+        "rev": "1e4c3803b8da874ff75224ec8512cb173036bbd8",
+        "revCount": 344,
+        "type": "tarball",
+        "url": "https://api.flakehub.com/f/pinned/catppuccin/nix/1.2.1/0193e646-1107-7f69-a402-f2a3988ecf1d/source.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://flakehub.com/f/catppuccin/nix/%2A"
+      }
+    },
     "determinate": {
       "inputs": {
         "determinate-nixd-aarch64-darwin": "determinate-nixd-aarch64-darwin",
@@ -193,12 +207,12 @@
         ]
       },
       "locked": {
-        "lastModified": 1774104215,
-        "narHash": "sha256-EAtviqz0sEAxdHS4crqu7JGR5oI3BwaqG0mw7CmXkO8=",
-        "rev": "f799ae951fde0627157f40aec28dec27b22076d0",
-        "revCount": 1191,
+        "lastModified": 1774861927,
+        "narHash": "sha256-FB1fbeJQjaTMI2JFAa0LNMaYXiShiYbJA6puGQC4xdg=",
+        "rev": "9c4469b68b62e122c3b3d2ab0ed3caeb04ff1ac4",
+        "revCount": 1194,
         "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/cachix/git-hooks.nix/0.1.1191%2Brev-f799ae951fde0627157f40aec28dec27b22076d0/019d117d-097a-7117-9b64-3fa646d45b80/source.tar.gz"
+        "url": "https://api.flakehub.com/f/pinned/cachix/git-hooks.nix/0.1.1194%2Brev-9c4469b68b62e122c3b3d2ab0ed3caeb04ff1ac4/019d3fde-2117-76b6-89af-586a93b418b6/source.tar.gz"
       },
       "original": {
         "type": "tarball",
@@ -259,12 +273,12 @@
         ]
       },
       "locked": {
-        "lastModified": 1774870460,
-        "narHash": "sha256-DHeILNrZRmOQ8dj0MGHpjnGN+RfEoo5pHDwF+xekIl0=",
-        "rev": "293490e1c1bf3bc46d7a1f2763052f0230d12e0c",
-        "revCount": 6432,
+        "lastModified": 1774898676,
+        "narHash": "sha256-0Utnqo+FbB+0CVUi0MI3oonF0Kuzy9VcgRkxl53Euvk=",
+        "rev": "a184bd2f8426087bae93f203403cd4b86c99e57d",
+        "revCount": 6435,
         "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/nix-community/home-manager/0.1.6432%2Brev-293490e1c1bf3bc46d7a1f2763052f0230d12e0c/019d3e87-09e5-7307-95c1-e8c771fdd7e1/source.tar.gz"
+        "url": "https://api.flakehub.com/f/pinned/nix-community/home-manager/0.1.6435%2Brev-a184bd2f8426087bae93f203403cd4b86c99e57d/019d4035-7b13-7dd6-9f0a-f984ac2d79a4/source.tar.gz"
       },
       "original": {
         "type": "tarball",
@@ -466,11 +480,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1774873029,
-        "narHash": "sha256-CGRCkjAIgm1zKU+2K9k0zVhpoW+0z8IS6lvy8rMHfX4=",
+        "lastModified": 1774953470,
+        "narHash": "sha256-xPQ2tuagWBdZgk1uZdD9cCTqWE+zjCvbiqa7UMl9lb0=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "1b8bec27de61feca9d199c842321e15d9b450836",
+        "rev": "96077feee02f328cbb0c9c691e81b8e42b3a7436",
         "type": "github"
       },
       "original": {
@@ -481,6 +495,7 @@
     },
     "root": {
       "inputs": {
+        "catpuccin": "catpuccin",
         "determinate": "determinate",
         "devshell": "devshell",
         "disko": "disko",
