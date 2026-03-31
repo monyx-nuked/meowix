@@ -60,6 +60,7 @@
     };
     # disko - declarative disk partitioning
     disko = {
+      url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # catpuccin-nix: don't you dare to care about theme i use!
