@@ -62,6 +62,11 @@
     disko = {
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # catpuccin-nix: don't you dare to care about theme i use!
+    catppuccin = {
+      url = "https://flakehub.com/f/catppuccin/nix/*";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   nixConfig = {
     cores = 2; # Use 2 cores maximum for stability
