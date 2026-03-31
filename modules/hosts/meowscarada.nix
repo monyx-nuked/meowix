@@ -38,7 +38,10 @@ in
             accent = "sapphire";
             enable = true;
           };
-          programs.fastfetch.enable = true;
+          programs = {
+            fastfetch.enable = true;
+            bat.enable = true;
+          };
         };
         catppuccin = {
           accent = "sapphire";
