@@ -6,6 +6,6 @@
   ];
 
   flake.diskoConfigurations = {
-
+    # placeholder
   };
 }

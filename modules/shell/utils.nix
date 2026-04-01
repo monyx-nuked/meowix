@@ -35,6 +35,7 @@ in
         fd
         html2text
         croc
+        fh
       ];
       programs = {
         yazi.enable = lib.mkDefault true;
