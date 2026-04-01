@@ -5,7 +5,7 @@ in
 {
   flake.modules = {
     nixos.${moduleName} =
-      { lib, ... }:
+      { lib, pkgs, ... }:
       {
         users.users.${config.flake.meta.user.username} = {
           isNormalUser = lib.mkForce true;
