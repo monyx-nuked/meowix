@@ -48,6 +48,10 @@ in
         skim.enable = lib.mkDefault true;
         starship.enable = lib.mkDefault true;
         fastfetch.enable = lib.mkDefault true;
+        helix = {
+          enable = lib.mkDefault true;
+          defaultEditor = lib.mkDefault true;
+        };
       };
     };
 }
