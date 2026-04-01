@@ -33,6 +33,7 @@ in
             "applications/direnv"
             "applications/gemini"
             "applications/btop"
+            "applications/opencode"
             inputs.nix-index-database.homeModules.default
           ];
         };
