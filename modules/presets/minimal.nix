@@ -18,7 +18,7 @@ in
         "catppuccin"
       ];
     };
-    homeModules."${prefix}/${presetName}" = {
+    homeManager."${prefix}/${presetName}" = {
       imports = config.flake.lib.resolveHm [
         "users"
         "shell/bat"
