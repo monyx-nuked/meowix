@@ -25,3 +25,6 @@ result*
 # Ignore common files that come from nix store
 # Related to this project's environment
 .pre-commit-config.yaml
+
+# Ignore twice dashed folders or files
+__*
