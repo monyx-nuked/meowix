@@ -15,6 +15,7 @@ in
             "wheel"
             "networkmanager"
           ];
+          shell = pkgs.fish;
         };
       };
     homeManager.${moduleName} =

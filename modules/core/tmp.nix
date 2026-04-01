@@ -1,6 +1,6 @@
 _:
 let
-  moduleName = "core/perf";
+  moduleName = "core/tmp";
 in
 {
   flake.modules.nixos.${moduleName} = {

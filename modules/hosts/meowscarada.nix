@@ -30,7 +30,7 @@ in
             # Home Manager preset modules
             "catppuccin"
             "users"
-            "applications/direnv"
+            "shell/direnv"
             "applications/gemini"
             "applications/btop"
             "applications/opencode"

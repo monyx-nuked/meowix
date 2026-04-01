@@ -1,5 +1,5 @@
 let
-  moduleName = "applications/direnv";
+  moduleName = "shell/direnv";
 in
 {
   flake.modules.homeManager.${moduleName} = {
