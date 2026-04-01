@@ -65,7 +65,7 @@
     };
     # catpuccin-nix: don't you dare to care about theme i use!
     catppuccin = {
-      url = "https://flakehub.com/f/catppuccin/nix/*";
+      url = "github:catppuccin/nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
