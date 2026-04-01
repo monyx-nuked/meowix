@@ -14,7 +14,12 @@ in
         dash
       ];
     };
-  flake.modules.homeManager.${moduleName} = {
-    program.fish.enable = true;
-  };
+  flake.modules.homeManager.${moduleName} =
+    { lib, ... }:
+    {
+      programs = {
+        starship.enable = lib.mkDefault true;
+        fish.enable = true;
+      };
+    };
 }
