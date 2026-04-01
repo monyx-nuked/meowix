@@ -47,7 +47,7 @@ in
         zoxide.enable = lib.mkDefault true;
         skim.enable = lib.mkDefault true;
         starship.enable = lib.mkDefault true;
-        programs.fastfetch.enable = lib.mkDefault true;
+        fastfetch.enable = lib.mkDefault true;
       };
     };
 }
