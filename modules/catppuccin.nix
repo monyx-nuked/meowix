@@ -15,7 +15,7 @@ in
     };
     homeManager.${moduleName} = {
       imports = [
-        inputs.catppuccin.homeManagerModules.catppuccin
+        inputs.catppuccin.homeModules.catppuccin
       ];
       catppuccin = {
         enable = true;
