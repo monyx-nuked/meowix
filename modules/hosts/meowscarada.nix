@@ -12,13 +12,7 @@ in
     modules = {
       nixos."hosts/${hostMeta.name}" = {
         imports = config.flake.lib.resolveOS [
-          "catppuccin"
-          "users"
-          "core/core"
-          "core/i18n"
-          "core/nh"
-          "core/timezone"
-          "core/perf"
+          "presets/minimal"
           inputs.nixos-wsl.nixosModules.default
         ];
         # Home Manager configuration for user
@@ -28,9 +22,7 @@ in
           # Home Manager modules (cross-platform)
           imports = config.flake.lib.resolveHm [
             # Home Manager preset modules
-            "catppuccin"
-            "users"
-            "shell/direnv"
+            "presets/minimal"
             "applications/gemini"
             "applications/btop"
             "applications/opencode"

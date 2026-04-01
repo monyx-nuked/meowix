@@ -46,7 +46,8 @@ in
         ripgrep.enable = lib.mkDefault true;
         fd.enable = lib.mkDefault true;
         zoxide.enable = lib.mkDefault true;
-        skim.enable = true;
+        skim.enable = lib.mkDefault true;
+        starship.enable = lib.mkDefault true;
       };
     };
 }
