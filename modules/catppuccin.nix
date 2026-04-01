@@ -10,6 +10,7 @@ in
       ];
       catppuccin = {
         accent = "sapphire";
+        cache = true;
         enable = true;
       };
     };
@@ -19,6 +20,7 @@ in
       ];
       catppuccin = {
         enable = true;
+        cache = true;
         accent = "sapphire";
       };
     };
