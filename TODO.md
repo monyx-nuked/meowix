@@ -11,10 +11,10 @@
 
 ## Setup
 
-- [ ] Basic developer environment setup
+- [x] Basic developer environment setup
     Including more advanced configuration files that help later
     Such as .editorconfig, .skills, GEMINI.md, etc.
-- [ ] Flake setup
+- [x] Flake setup
     Set up a flake and it's inputs, flake.lock too (a.k.a.) lockfile
 
 ## Notes
