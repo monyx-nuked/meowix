@@ -37,7 +37,7 @@ let
       auto-optimise-store = true;
       cores = 3;
       max-jobs = 4;
-
+      eval-cores = 0; # Det specific setting
     }
   ];
 
