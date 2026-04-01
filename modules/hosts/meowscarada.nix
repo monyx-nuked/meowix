@@ -32,6 +32,7 @@ in
             "users"
             "applications/direnv"
             "applications/gemini"
+            "applications/btop"
             inputs.nix-index-database.homeModules.default
           ];
         };
