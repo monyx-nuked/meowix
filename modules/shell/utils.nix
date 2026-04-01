@@ -16,7 +16,6 @@ in
         killall
         nixfmt
       ];
-      programs.fastfetch.enable = true;
     };
   flake.modules.homeManager.${moduleName} =
     { pkgs, lib, ... }:
@@ -48,6 +47,7 @@ in
         zoxide.enable = lib.mkDefault true;
         skim.enable = lib.mkDefault true;
         starship.enable = lib.mkDefault true;
+        programs.fastfetch.enable = lib.mkDefault true;
       };
     };
 }
