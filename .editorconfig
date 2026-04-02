@@ -3,6 +3,10 @@
 # top-most EditorConfig file
 root = true
 
+[*.asc]
+insert_final_newline = false
+trim_trailing_whitespace = false
+
 [*.md]
 insert_final_newline = false
 trim_trailing_whitespace = false
