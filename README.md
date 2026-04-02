@@ -4,6 +4,8 @@
 > This is a project that I am trying to **build from scratch**[^1], \
 > And **do not take** from other NixOS configurations
 
+Oh well rules didn't work for me!
+
 This is a NixOS configuration that is used for 3 hosts that are all on one PC. \
 I am treating myself as completely new to NixOS and I will learn making config \
 Arch Linux tends to break and I need to re-install it everytime \
