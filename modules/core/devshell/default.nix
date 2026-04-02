@@ -27,6 +27,7 @@
             shellcheck.enable = true;
             beautysh.enable = true;
             convco.enable = true;
+            editorconfig-checker.enable = true;
           };
         };
       };
