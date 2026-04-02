@@ -27,4 +27,4 @@ result*
 .pre-commit-config.yaml
 
 # Ignore twice dashed folders or files
-__*
+._*
