@@ -5,7 +5,7 @@
   ...
 }:
 let
-  prefix = "hosts/";
+  prefix = "hosts.";
   platform = {
     nixos = {
       default.system = "x86_64-linux";
