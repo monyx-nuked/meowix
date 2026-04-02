@@ -8,10 +8,10 @@
     {
       devshells.default = {
         devshell = {
-          name = "meowix-env";
+          name = "dev";
           motd = ''
             {202}{italic}Welcome to {underline}meowix project{reset}!
-            {bold}This development shell contains necessary utilities to maintain this project.{reset}
+            {203}{bold}This development shell contains necessary utilities to maintain this project.{reset}
           '';
           packages = [
             # Utilities #
