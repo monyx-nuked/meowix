@@ -130,10 +130,16 @@ in
               type = types.nonEmptyStr;
               description = "Host name (must match flake id)";
             };
-            sshAlias = mkOption {
-              type = types.nullOr types.nonEmptyStr;
-              default = null;
-              description = "Short SSH alias for this host";
+            ssh = mkOption {
+              type = types.submodule {
+                options.alias = mkOption {
+                  type = types.nullOr types.nonEmptyStr;
+                  default = null;
+                  description = "Short SSH alias for this host";
+                };
+              };
+              default = { };
+              description = "SSH settings for this host";
             };
             tailscale = mkOption {
               type = enableSubmodule;
@@ -156,5 +162,7 @@ in
 
   config.flake.meta = {
     inherit user;
+
+    unfree = true;
   };
 }
