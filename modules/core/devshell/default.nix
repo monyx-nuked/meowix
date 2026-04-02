@@ -56,6 +56,7 @@
             # Formatters #
             pkgs.nixfmt # Official formatter for Nix code
             pkgs.shfmt # Shell parser and formatter
+            pkgs.convco # Conventional commit cli
           ];
           meta = {
             description = "Development shell made for this project";
