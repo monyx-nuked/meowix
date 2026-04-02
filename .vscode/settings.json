@@ -12,6 +12,7 @@
   "terminal.integrated.tabs.defaultIcon": "console",
   "editor.tabSize": 2,
   "workbench.colorTheme": "Gruvbox Dark Hard",
+  "pre-commit-helper.config": ".pre-commit-config.yaml",
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {

@@ -27,7 +27,7 @@ meowix
 │   │   ├── lib.nix           | Libraries for flake
 │   │   ├── meta.nix          | Metadata declarations
 │   │   ├── modules.nix       | Modules to import from flake-parts
-│   │   └── nixpkgs.nix       | Nixpkgs-specific settings (such as `systems` to generate)
+│   │   └── nixpkgs.nix       | Nixpkgs-specific settings
 │   ├── hosts/*.nix           | Hosts modules
 │   └── */*.nix               | Any other system configuration categorized
 ├── notes                     | Obsidian vault

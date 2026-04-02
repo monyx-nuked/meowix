@@ -4,10 +4,11 @@
 > This is a project that I am trying to **build from scratch**[^1], \
 > And **do not take** from other NixOS configurations
 
-This is a NixOS configuration that is used for 3 hosts that are all on one computer but different operating systems. \
-I am treating myself as completely new to NixOS and I will learn making a configuration for myself because \
+This is a NixOS configuration that is used for 3 hosts that are all on one PC. \
+I am treating myself as completely new to NixOS and I will learn making config \
 Arch Linux tends to break and I need to re-install it everytime \
-I know there are various tools to install such distro but configuring it will be a mess ( and boring ) \
+I know there are various tools to install such distro but... \
+configuring it will be a mess ( and boring ) \
 While on NixOS it is easy by just adding a configuration.
 
 ## Map of planned hosts to build
@@ -33,9 +34,9 @@ And to make documentation for this project
 ### AI
 
 - AI Usage for generating/rewriting content is **prohibited**
-- Using AI to fix bugs or grammar/code issues is fine
-- Using AI for problem solving suggestions are fine (such as how to implement host generation)
-- AI usage should be strict and advanced (like having skills or specific markdown file)
+- Using AI to fix bugs or grammar/code issues is OK
+- Using AI for problem solving suggestions are fine (such as abstract things)
+- AI usage should be strict and advanced (like having skills or etc)
 
 ### Commit messages
 
@@ -47,7 +48,7 @@ For consistency and readability across versions
 > ```bash
 > <type>[optional scope]: <description>
 > [optional body]
-> [optional footer(s)] 
+> [optional footer(s)]
 > ```
 
 ### Formatting
@@ -67,7 +68,8 @@ Code's functions such as resolve, resolveHm, resolveDarwin (lib.mapAttrs', etc)
 Use layout structure that is written in [LAYOUT](./docs/LAYOUT.md)
 
 - The file has tree-structure captured of this project and it's description,
-    It maps the project structure so it will be understandable what each parts of the project do
+    It maps the project structure so it will be understandable
+    like what each parts of the project do
 
 ---------------
 

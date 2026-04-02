@@ -2,10 +2,34 @@
 {
   imports = [
     inputs.devshell.flakeModule
+    inputs.git-hooks.flakeModule
   ];
   perSystem =
-    { pkgs, ... }:
+    { pkgs, config, ... }:
     {
+      pre-commit = {
+        check.enable = true;
+        settings = {
+          enable = true;
+          package = pkgs.prek;
+          hooks = {
+            nixfmt = {
+              enable = true;
+              settings.indent = 2;
+            };
+            shfmt = {
+              enable = true;
+              settings.indent = 2;
+            };
+            gitlint.enable = true;
+            rumdl.enable = true;
+            flake-checker.enable = true;
+            actionlint.enable = true;
+            shellcheck.enable = true;
+            beautysh.enable = true;
+          };
+        };
+      };
       devshells.default = {
         devshell = {
           name = "dev";
@@ -13,6 +37,7 @@
             {202}{italic}Welcome to {underline}meowix project{reset}!
             {203}{bold}This development shell contains necessary utilities to maintain this project.{reset}
           '';
+          startup.git-hooks.text = config.pre-commit.settings.shellHook;
           packages = [
             # Utilities #
             pkgs.nh # Yet another nix cli helper
