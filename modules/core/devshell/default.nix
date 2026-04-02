@@ -21,12 +21,12 @@
               enable = true;
               settings.indent = 2;
             };
-            gitlint.enable = true;
             rumdl.enable = true;
             flake-checker.enable = true;
             actionlint.enable = true;
             shellcheck.enable = true;
             beautysh.enable = true;
+            convco.enable = true;
           };
         };
       };
