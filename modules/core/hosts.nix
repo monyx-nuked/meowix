@@ -51,15 +51,15 @@ let
   };
 
   host =
-    type: name: module:
+    host_type: host_name: host_module:
     let
-      name = lib.removePrefix prefix name;
-      type_platform = platform.${type};
+      name = lib.removePrefix prefix host_name;
+      type_platform = platform.${host_type};
       eval_system =
         if (config ? systems) && (config.systems != [ ]) then
           let
             is_darwin = s: lib.hasSuffix "-darwin" s;
-            matching_systems = lib.filter (s: (type == "darwin") == (is_darwin s)) config.systems;
+            matching_systems = lib.filter (s: (host_type == "darwin") == (is_darwin s)) config.systems;
           in
           if matching_systems != [ ] then builtins.head matching_systems else type_platform.default.system
         else
@@ -69,16 +69,16 @@ let
       inherit name;
       value = type_platform.function.system {
         modules = [
-          module
-          type_platform.modules
+          host_module
+        ]
+        ++ type_platform.modules
+        ++ [
           {
             home-manager = {
               # Base home-manager settings
               useGlobalPkgs = lib.mkDefault true;
               useUserPackages = lib.mkDefault true;
-              imports = [
-                platform.home-manager.modules
-              ];
+              sharedModules = platform.home-manager.modules;
             };
           }
           {

@@ -5,5 +5,6 @@ let
 in
 {
   flake.modules.nixos."${prefix}${host_name}" = {
+    system.stateVersion = "25.11";
   };
 }
