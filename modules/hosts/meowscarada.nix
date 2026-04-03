@@ -15,6 +15,7 @@ in
       imports = config.flake.lib.resolve [
         "system.nix"
         "system.home-manager"
+        "system.users"
         inputs.nixos-wsl.nixosModules.default
       ];
       wsl.enable = true;
