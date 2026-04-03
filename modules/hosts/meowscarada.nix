@@ -2,6 +2,7 @@
 let
   prefix = "hosts.";
   host_name = "meowscarada";
+  global_stateversion = "25.11";
   host_meta = {
     name = host_name;
     ssh.alias = "wsl";
@@ -18,8 +19,15 @@ in
         "system.users"
         inputs.nixos-wsl.nixosModules.default
       ];
+      home-manager.users.${config.flake.meta.user.username} = {
+        home.stateVersion = global_stateversion;
+        imports = config.flake.lib.resolveHm [
+          "system.users"
+        ];
+      };
       wsl.enable = true;
-      system.stateVersion = "25.11";
+      wsl.defaultUser = config.flake.meta.user.username;
+      system.stateVersion = global_stateversion;
     };
   };
 }
