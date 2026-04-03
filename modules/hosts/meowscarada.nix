@@ -27,6 +27,7 @@ in
         "perf.tmp"
         "shell.fish"
         "shell.utils"
+        "theme.catppuccin"
         inputs.nixos-wsl.nixosModules.default
       ];
       home-manager.users.${config.flake.meta.user.username} = {
@@ -36,6 +37,7 @@ in
           "shell.direnv"
           "shell.fish"
           "shell.utils"
+          "theme.catppuccin"
         ];
       };
       wsl.enable = true;
