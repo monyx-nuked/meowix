@@ -21,6 +21,10 @@ in
         "system.home-manager"
         "system.users"
         "system.nixpkgs"
+        "system.timezone"
+        "system.locale"
+        "system.nh"
+        "perf.tmp"
         "shell.fish"
         "shell.utils"
         inputs.nixos-wsl.nixosModules.default
