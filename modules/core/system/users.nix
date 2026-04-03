@@ -24,7 +24,7 @@
       let
         inherit (config.flake.meta.user) avatar;
         avatar_file =
-          if avatar.source != null then avatar.source else pkgs.fetchUrl { inherit (avatar) url sha256; };
+          if avatar.source != null then avatar.source else pkgs.fetchurl { inherit (avatar) url sha256; };
       in
       {
         programs.home-manager.enable = true;
