@@ -31,6 +31,7 @@ in
       wsl.enable = true;
       wsl.defaultUser = config.flake.meta.user.username;
       system.stateVersion = host_meta.stateversion.nixos;
+      nixpkgs.hostPlatform = "x86_64-linux";
     };
   };
 }
