@@ -78,6 +78,7 @@ let
               # Base home-manager settings
               useGlobalPkgs = lib.mkDefault true;
               useUserPackages = lib.mkDefault true;
+              # Global modules
               sharedModules = platform.home-manager.modules;
             };
           }
