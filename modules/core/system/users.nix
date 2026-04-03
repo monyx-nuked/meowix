@@ -29,6 +29,12 @@
       {
         programs.home-manager.enable = true;
         home = {
+          inherit (config.flake.meta.user) username;
+          homeDirectory =
+            if pkgs.stdenv.isDarwin then
+              "/Users/${config.flake.meta.user.username}"
+            else
+              "/home/${config.flake.meta.user.username}";
           file.".face".source = avatar_file;
         };
       };
