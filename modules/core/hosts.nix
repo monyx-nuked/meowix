@@ -31,7 +31,9 @@ let
         #   Global modules are imported first-class so some options aren't missing
         #   There is possible way to import for each file but it is annoying
         home-manager = inputs.home-manager.darwinModules.home-manager;
-        determinate = inputs.determinate.darwinModules.default;
+        # Avoid demolishing darwin (specifically intel one)'s
+        # package manager
+        determinate = { };
         nur = inputs.nur.modules.darwin.default;
         nix-index = inputs.nix-index-database.darwinModules.default;
         catppuccin = inputs.catppuccin.nixosModules.catppuccin;
