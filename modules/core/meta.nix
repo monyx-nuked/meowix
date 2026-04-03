@@ -141,10 +141,9 @@ in
     };
 
     unfree = mkOption {
-      # keyed by package name or category, each togglable
       type = enable_submodule;
       default = { };
-      description = "Per-package unfree toggles";
+      description = "Unfree toggle";
     };
 
     hosts = mkOption {
@@ -183,6 +182,12 @@ in
       description = "Dashboard of managed hosts";
     };
 
+    cuda = mkOption {
+      type = enable_submodule;
+      default = { };
+      description = "CUDA (nixpkgs) toggle";
+    };
+
     extra = mkOption {
       type = types.attrsOf types.anything;
       default = { };
@@ -192,6 +197,7 @@ in
 
   config.flake.meta = {
     inherit user;
-    unfree.enable = true;
+    unfree.enable = lib.mkDefault true;
+    cuda.enable = lib.mkDefault false;
   };
 }
