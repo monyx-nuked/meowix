@@ -8,13 +8,17 @@ let
       username = "monyx-nuked";
       repo = "meowix";
     };
-    ssh.authorizedKeys = [ ];
+    ssh.authorizedKeys = [ "" ];
     gpg = {
       fingerprint = "BB64 31B5 B087 C4F3 29F8 857C 2F17 ABD4 5C0F FD95";
       publicKeyFile = inputs.self + /config/gpg;
     };
     avatar = {
+      # If the source is empty then automatically get from github
       source = null;
+      # Get hash from nix-prefetch-url "https://github.com/monyx-nuked.png"
+      sha256 = "06x8bdn80ysyk62p6gxldrj6gq9dwm29dbffg3dkzayy1lcl293p";
+      # URL Constructed from github.username
       url = "https://github.com/${github.username}.png";
     };
   };
