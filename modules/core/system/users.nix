@@ -1,7 +1,7 @@
 { config, ... }:
 {
   flake.modules = {
-    nixos."core.users" =
+    nixos."system.users" =
       { lib, pkgs, ... }:
       {
         users = {
@@ -19,7 +19,7 @@
           };
         };
       };
-    home-manager."core.users" =
+    home-manager."system.users" =
       { pkgs, ... }:
       let
         inherit (config.flake.meta.user) avatar;
