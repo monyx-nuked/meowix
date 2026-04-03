@@ -22,7 +22,7 @@ let
   inherit (lib) mkOption types;
 
   # Reusable submodule for simple enable flags
-  enableSubmodule = types.submodule {
+  enable_submodule = types.submodule {
     options.enable = mkOption {
       type = types.bool;
       default = false;
@@ -117,7 +117,7 @@ in
 
     unfree = mkOption {
       # keyed by package name or category, each togglable
-      type = types.attrsOf enableSubmodule;
+      type = enable_submodule;
       default = { };
       description = "Per-package unfree toggles";
     };
@@ -142,7 +142,7 @@ in
               description = "SSH settings for this host";
             };
             tailscale = mkOption {
-              type = enableSubmodule;
+              type = enable_submodule;
               default = { };
               description = "Tailscale settings for this host";
             };
@@ -162,6 +162,6 @@ in
 
   config.flake.meta = {
     inherit user;
-    unfree = true;
+    unfree.enable = true;
   };
 }
