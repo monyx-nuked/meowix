@@ -21,7 +21,7 @@ in
       ];
       home-manager.users.${config.flake.meta.user.username} = {
         home.stateVersion = global_stateversion;
-        imports = config.flake.lib.resolveHm [
+        imports = config.flake.lib.resolve_hm [
           "system.users"
         ];
       };
