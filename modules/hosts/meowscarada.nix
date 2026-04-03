@@ -20,12 +20,16 @@ in
         "system.nix"
         "system.home-manager"
         "system.users"
+        "system.nixpkgs"
         inputs.nixos-wsl.nixosModules.default
       ];
       home-manager.users.${config.flake.meta.user.username} = {
         home.stateVersion = host_meta.stateversion.home;
         imports = config.flake.lib.resolve_hm [
           "system.users"
+          "shell.direnv"
+          "shell.fish"
+          "shell.utils"
         ];
       };
       wsl.enable = true;
