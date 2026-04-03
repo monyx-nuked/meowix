@@ -15,6 +15,7 @@
                 "wheel"
                 "networkmanager"
               ];
+              shell = pkgs.fish;
             };
           };
         };
