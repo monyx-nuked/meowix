@@ -28,6 +28,7 @@ in
         "shell.fish"
         "shell.utils"
         "theme.catppuccin"
+        "core.nix-ld"
         inputs.nixos-wsl.nixosModules.default
       ];
       home-manager.users.${config.flake.meta.user.username} = {
