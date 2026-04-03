@@ -34,6 +34,23 @@ let
     };
   };
 
+  stateversion_module = types.submodule {
+    options.nixos = mkOption {
+      type = types.nonEmptyStrl;
+      default = "25.11";
+      description = "State Version of the NixOS";
+    };
+    options.home = mkOption {
+      type = types.nonEmptyStrl;
+      default = "25.11";
+      description = "State Version of the home-manager";
+    };
+    options.darwin = mkOption {
+      type = types.nonEmptyStrl;
+      default = "6";
+      description = "State Version of the nix-darwin";
+    };
+  };
 in
 {
   options.flake.meta = {
@@ -107,6 +124,10 @@ in
                   default = null;
                   description = "Local avatar path; if null, fetched from GitHub";
                 };
+                sha256 = mkOption {
+                  type = types.nonEmptyStr;
+                  description = "SHA256 Hash of the file";
+                };
                 url = mkOption {
                   type = types.nonEmptyStr;
                   description = "Remote avatar URL";
@@ -149,6 +170,11 @@ in
               type = enable_submodule;
               default = { };
               description = "Tailscale settings for this host";
+            };
+            stateversion = mkOption {
+              type = stateversion_module;
+              default = { };
+              description = "State Version info about this host";
             };
           };
         }
