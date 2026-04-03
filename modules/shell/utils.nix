@@ -48,6 +48,11 @@ _: {
           enable = lib.mkDefault true;
           defaultEditor = lib.mkDefault true;
         };
+        # IMPORTANT!
+        git = {
+          enable = true;
+          lfs.enable = true;
+        };
       };
     };
 }
