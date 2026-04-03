@@ -162,7 +162,6 @@ in
 
   config.flake.meta = {
     inherit user;
-
     unfree = true;
   };
 }
