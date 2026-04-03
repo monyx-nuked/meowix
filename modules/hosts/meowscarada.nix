@@ -21,6 +21,8 @@ in
         "system.home-manager"
         "system.users"
         "system.nixpkgs"
+        "shell.fish"
+        "shell.utils"
         inputs.nixos-wsl.nixosModules.default
       ];
       home-manager.users.${config.flake.meta.user.username} = {
