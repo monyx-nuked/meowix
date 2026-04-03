@@ -9,7 +9,7 @@
       mod: if builtins.isString mod then config.flake.modules.nixos.${mod} else mod
     );
     resolve_hm = builtins.map (
-      mod: if builtins.isString mod then config.flake.modules.home-manager.${mod} else mod
+      mod: if builtins.isString mod then config.flake.modules.homeManager.${mod} else mod
     );
     resolve_darwin = builtins.map (
       mod: if builtins.isString mod then config.flake.modules.darwin.${mod} else mod

@@ -19,7 +19,7 @@
           };
         };
       };
-    home-manager."system.users" =
+    homeManager."system.users" =
       { pkgs, ... }:
       let
         inherit (config.flake.meta.user) avatar;
