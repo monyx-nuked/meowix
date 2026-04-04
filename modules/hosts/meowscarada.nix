@@ -17,28 +17,13 @@ in
     meta.hosts = [ host_meta ];
     modules.nixos."${prefix}${host_name}" = {
       imports = config.flake.lib.resolve [
-        "system.nix"
-        "system.home-manager"
-        "system.users"
-        "system.nixpkgs"
-        "system.timezone"
-        "system.locale"
-        "system.nh"
-        "perf.tmp"
-        "shell.fish"
-        "shell.utils"
-        "theme.catppuccin"
-        "core.nix-ld"
+        "system"
         inputs.nixos-wsl.nixosModules.default
       ];
       home-manager.users.${config.flake.meta.user.username} = {
         home.stateVersion = host_meta.stateversion.home;
         imports = config.flake.lib.resolve_hm [
-          "system.users"
-          "shell.direnv"
-          "shell.fish"
-          "shell.utils"
-          "theme.catppuccin"
+          "system"
         ];
       };
       wsl.enable = true;
