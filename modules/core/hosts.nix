@@ -78,7 +78,8 @@ let
           {
             home-manager = {
               # Base home-manager settings
-              useGlobalPkgs = lib.mkDefault true;
+              # Nixpkgs for home-manager config already exists
+              useGlobalPkgs = lib.mkDefault false;
               useUserPackages = lib.mkDefault true;
               # Global modules
               sharedModules = platform.home-manager.modules;

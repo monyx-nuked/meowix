@@ -40,7 +40,7 @@ let
 in
 {
   flake.modules = {
-    nixos."system.nix" = {
+    nixos."system.nix.nix" = {
       nix = {
         settings = lib.mkMerge [
           shared.nixos_settings
@@ -58,7 +58,7 @@ in
         optimise.automatic = true;
       };
     };
-    darwin."system.nix" = {
+    darwin."system.nix.nix" = {
       nix = {
         settings = lib.mkMerge [
           shared.nixos_settings
