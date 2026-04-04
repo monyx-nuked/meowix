@@ -19,5 +19,14 @@
         "system.git"
       ];
     };
+    darwin.system = {
+      imports = config.flake.lib.resolve_darwin [
+        "system.home-manager"
+        "system.nh"
+        "system.nix"
+        "system.timezone"
+        "system.users"
+      ];
+    };
   };
 }
