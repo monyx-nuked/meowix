@@ -16,7 +16,7 @@
     darwin."system.nix" = {
       imports = config.flake.lib.resolve_darwin [
         "system.nix.nix"
-        "system.nix.nix-ld"
+        "system.nix.nixpkgs"
       ];
     };
   };
