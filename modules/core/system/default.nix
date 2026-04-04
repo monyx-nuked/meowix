@@ -11,11 +11,13 @@
         "system.nixpkgs"
         "system.timezone"
         "system.users"
+        "system.git"
       ];
     };
     homeModules."system" = {
       imports = config.flake.lib.resolve [
         "system.users"
+        "system.git"
       ];
     };
   };
