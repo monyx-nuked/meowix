@@ -22,6 +22,7 @@ in
       imports = config.flake.lib.resolve [
         "system"
         "system.wsl"
+        "shell"
         inputs.nixos-wsl.nixosModules.default
       ];
       home-manager.users.${config.flake.meta.user.username} = {
@@ -29,6 +30,7 @@ in
         imports = config.flake.lib.resolve_hm [
           "system"
           "dev"
+          "shell"
         ];
       };
       networking.hostName = host_name;
