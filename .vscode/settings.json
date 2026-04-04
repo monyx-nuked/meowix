@@ -7,6 +7,8 @@
   "workbench.activityBar.compact": true,
   "workbench.sideBar.location": "right",
   "workbench.panel.defaultLocation": "bottom",
+  "workbench.panel.showLabels": false,
+  "workbench.secondarySideBar.showLabels": false,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.productIconTheme": "material-product-icons",
   "terminal.integrated.tabs.defaultIcon": "console",
