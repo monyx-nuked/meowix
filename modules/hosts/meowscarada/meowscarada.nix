@@ -28,6 +28,7 @@ in
         home.stateVersion = host_meta.stateversion.home;
         imports = config.flake.lib.resolve_hm [
           "system"
+          "dev"
         ];
       };
       networking.hostName = host_name;
