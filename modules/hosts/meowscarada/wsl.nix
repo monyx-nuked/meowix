@@ -14,7 +14,7 @@
       useWindowsDriver = true;
       wrapBinSh = true;
       wslConf = {
-        automount.enabled = false;
+        automount.enabled = true; # Enable because interop needs it
       };
     };
   };
