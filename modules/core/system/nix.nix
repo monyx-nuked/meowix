@@ -22,7 +22,6 @@ let
         "nix-command"
         "flakes"
       ];
-
       auto-optimise-store = true;
     };
     nix_settings = lib.mkMerge [
