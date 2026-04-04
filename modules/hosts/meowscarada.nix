@@ -14,7 +14,10 @@ let
 in
 {
   flake = {
-    meta.hosts = [ host_meta ];
+    meta = {
+      hosts = [ host_meta ];
+      unfree.enable = true;
+    };
     modules.nixos."${prefix}${host_name}" = {
       imports = config.flake.lib.resolve [
         "system"
