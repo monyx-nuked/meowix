@@ -4,7 +4,7 @@
 # Gruvbox Rainbow theme
 format = """
 [](color_orange)\
-$os\
+$os \
 $username\
 [](bg:color_yellow fg:color_orange)\
 $directory\
