@@ -15,7 +15,7 @@ in
         users = {
           mutableUsers = true; # TODO: Soon disable this
           users = {
-            ${config.flake.meta.user.username} = {
+            ${top_config.flake.meta.user.username} = {
               isNormalUser = true;
               description = top_config.flake.meta.user.full.name;
               openssh.authorizedKeys.keys = top_config.flake.meta.user.ssh.authorizedKeys;
@@ -37,7 +37,7 @@ in
       }:
       {
         users = {
-          ${config.flake.meta.user.username} = {
+          ${top_config.flake.meta.user.username} = {
             description = top_config.flake.meta.user.full.name;
             openssh.authorizedKeys.keys = top_config.flake.meta.user.ssh.authorizedKeys;
             shell = lib.mkIf config.programs.fish.enable pkgs.fish;
