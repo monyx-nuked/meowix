@@ -31,12 +31,8 @@ let
         #   Global modules are imported first-class so some options aren't missing
         #   There is possible way to import for each file but it is annoying
         home-manager = inputs.home-manager.darwinModules.home-manager;
-        # Avoid demolishing darwin (specifically intel one)'s
-        # package manager
-        determinate = { };
         nur = inputs.nur.modules.darwin.default;
         nix-index = inputs.nix-index-database.darwinModules.default;
-        catppuccin = inputs.catppuccin.nixosModules.catppuccin;
       };
     };
     # Auxiliary
@@ -76,14 +72,8 @@ let
         ++ type_platform.modules
         ++ [
           {
-            home-manager = {
-              # Base home-manager settings
-              # Nixpkgs for home-manager config already exists
-              useGlobalPkgs = lib.mkDefault false;
-              useUserPackages = lib.mkDefault true;
-              # Global modules
-              sharedModules = platform.home-manager.modules;
-            };
+            # Global modules
+            home-manager.sharedModules = platform.home-manager.modules;
           }
           {
             nixpkgs.hostPlatform = lib.mkDefault eval_system;
