@@ -30,6 +30,7 @@ in
           "system"
         ];
       };
+      networking.hostName = host_name;
       system.stateVersion = host_meta.stateversion.nixos;
       nixpkgs.hostPlatform = "x86_64-linux";
     };
