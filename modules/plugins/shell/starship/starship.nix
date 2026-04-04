@@ -5,7 +5,6 @@
       programs.starship = {
         enable = true;
         enableTransience = lib.mkIf config.programs.fish.enable true;
-        settings = lib.importTOML ./starship.toml;
       };
     };
 }
