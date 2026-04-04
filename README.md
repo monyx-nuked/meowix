@@ -13,9 +13,10 @@ I know there are various tools to install such distro but... \
 configuring it will be a mess ( and boring ) \
 While on NixOS it is easy by just adding a configuration.
 
-## Note about pattern:
+## Note about pattern
+
 This is a semi-monorepo style configuration, however
-I still copied some dendritic pattern practices 
+I still copied some dendritic pattern practices
 because I don't have much time to play with my configuration
 and think philosophically to implement per-program package export
 and install it inside configuration
