@@ -1,4 +1,3 @@
-_:
 let
   home-manager = {
     # Additional settings for home-manager
