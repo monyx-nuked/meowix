@@ -19,6 +19,16 @@
           };
         };
       };
+    darwin."system.users" =
+      { config, ... }:
+      {
+        users = {
+          ${config.flake.meta.user.username} = {
+            description = config.flake.meta.user.full.name;
+            openssh.authorizedKeys.keys = config.flake.meta.user.ssh.authorizedKeys;
+          };
+        };
+      };
     homeManager."system.users" =
       { pkgs, ... }:
       let
