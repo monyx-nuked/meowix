@@ -16,6 +16,7 @@
         "shell.fish"
         "shell.bat?"
         "shell.eza?"
+        "shell.rg?"
       ];
     };
   };
