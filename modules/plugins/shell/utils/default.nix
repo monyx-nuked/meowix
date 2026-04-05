@@ -21,6 +21,7 @@
         "shell.utils.fzf?"
         "shell.utils.fd?"
         "shell.utils.rga?"
+        "shell.utils.delta?"
       ];
     };
   };
