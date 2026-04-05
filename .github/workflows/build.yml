@@ -46,14 +46,12 @@ jobs:
         if: matrix.target == 'nixos'
         # Dynamically builds the hostname from the matrix
         run: |
-          sudo -E \
           nix build --accept-flake-config \
           -L \
           .#nixosConfigurations.${{ matrix.hostname }}.config.system.build.toplevel
       - name: Build DevShell
         if: matrix.target == 'devshell'
         run: |
-          sudo -E \
           nix build --accept-flake-config \
           -L \
           .#devShells.x86_64-linux.default
