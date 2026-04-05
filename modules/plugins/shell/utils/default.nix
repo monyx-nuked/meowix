@@ -20,7 +20,8 @@
         "shell.utils.z?"
         "shell.utils.fzf?"
         "shell.utils.fd?"
-        "shell.utils.rga?"
+        # Disabled because for WSL ( can be enabled regardless )
+        # "shell.utils.rga?"
         "shell.utils.delta?"
       ];
     };
