@@ -35,20 +35,22 @@ let
   };
 
   stateversion_module = types.submodule {
-    options.nixos = mkOption {
-      type = types.nonEmptyStrl;
-      default = "25.11";
-      description = "State Version of the NixOS";
-    };
-    options.home = mkOption {
-      type = types.nonEmptyStrl;
-      default = "25.11";
-      description = "State Version of the home-manager";
-    };
-    options.darwin = mkOption {
-      type = types.nonEmptyStrl;
-      default = "6";
-      description = "State Version of the nix-darwin";
+    options = {
+      nixos = mkOption {
+        type = types.nonEmptyStrl;
+        default = "25.11";
+        description = "State Version of the NixOS";
+      };
+      home = mkOption {
+        type = types.nonEmptyStrl;
+        default = "25.11";
+        description = "State Version of the home-manager";
+      };
+      darwin = mkOption {
+        type = types.nonEmptyStrl;
+        default = "6";
+        description = "State Version of the nix-darwin";
+      };
     };
   };
 in

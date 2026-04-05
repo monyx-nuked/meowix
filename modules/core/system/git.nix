@@ -15,7 +15,7 @@
           {
             user = {
               name = config.flake.meta.user.github.username;
-              email = config.flake.meta.user.email;
+              inherit (config.flake.meta.user) email;
             };
           }
         ];
@@ -31,7 +31,7 @@
           };
           user = {
             name = config.flake.meta.user.github.username;
-            email = config.flake.meta.user.email;
+            inherit (config.flake.meta.user) email;
           };
         };
       };
