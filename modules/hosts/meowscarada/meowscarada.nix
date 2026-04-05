@@ -23,6 +23,7 @@ in
         "system"
         "system.wsl"
         "shell"
+        "catppuccin"
         inputs.nixos-wsl.nixosModules.default
       ];
       home-manager.users.${config.flake.meta.user.username} = {
@@ -31,6 +32,7 @@ in
           "system"
           "dev"
           "shell"
+          "catppuccin"
         ];
       };
       networking.hostName = host_name;
