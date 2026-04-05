@@ -13,7 +13,7 @@ in
       }:
       {
         users = {
-          mutableUsers = true; # TODO: Soon disable this
+          mutableUsers = false; # TODO: Soon disable this
           users = {
             root = {
               isSystemUser = true;
