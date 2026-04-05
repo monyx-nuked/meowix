@@ -1,4 +1,4 @@
-name: NixOS
+name: Flake Builder & Exporter
 concurrency: nixos
 
 on:
@@ -7,6 +7,7 @@ on:
     push:
         branches:
           - master
+          - update_flake_lock_action
         paths-ignore:
           - "README.md"
           - ".gitignore"
