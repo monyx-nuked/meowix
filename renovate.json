@@ -22,7 +22,7 @@
   "nix": {
     "enabled": true,
     "managerFilePatterns": [
-      "/(^|/)flake\\.nix$/"
+      "(^|/)flake\\.nix$"
     ]
   },
   "github-actions": {
