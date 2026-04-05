@@ -18,6 +18,7 @@
         "shell.utils.rg?"
         "shell.utils.tldr?"
         "shell.utils.z?"
+        "shell.utils.fzf?"
       ];
     };
   };
