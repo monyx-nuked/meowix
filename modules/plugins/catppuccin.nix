@@ -1,7 +1,9 @@
 let
   config = {
     catppuccin = {
+      accent = "red";
       enable = true;
+      flavor = "mocha";
       cache.enable = true;
     };
   };
