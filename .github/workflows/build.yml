@@ -12,7 +12,7 @@ on:
           - "README.md"
           - ".gitignore"
 jobs:
-    build-necrozma:
+    build-meowscarada:
         runs-on: ubuntu-latest
         steps:
           - name: Free Disk Space (Ubuntu)
