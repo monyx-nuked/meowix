@@ -24,6 +24,7 @@ in
         "system.wsl"
         "shell"
         "catppuccin"
+        "secrets.sops"
         inputs.nixos-wsl.nixosModules.default
       ];
       home-manager.users.${config.flake.meta.user.username} = {

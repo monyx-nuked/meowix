@@ -10,8 +10,8 @@ let
     };
     ssh.authorizedKeys = [ "" ];
     gpg = {
-      fingerprint = "BB64 31B5 B087 C4F3 29F8 857C 2F17 ABD4 5C0F FD95";
-      publicKeyFile = inputs.self + /config/gpg;
+      fingerprint = "86D7 F83B 3BCF 74D7 D0C4  752C F15B 6116 3CFC EBDD";
+      publicKeyFile = inputs.self + /config/gpg/public_key.asc;
     };
     avatar = {
       # If the source is empty then automatically get from github

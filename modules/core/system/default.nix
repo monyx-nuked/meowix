@@ -10,6 +10,7 @@
         "system.timezone"
         "system.users"
         "system.git"
+        "system.gpg"
       ];
     };
     homeManager.system = {
@@ -17,6 +18,7 @@
         "system.nix"
         "system.users"
         "system.git"
+        "system.gpg"
       ];
     };
     darwin.system = {
@@ -26,6 +28,7 @@
         "system.nix"
         "system.timezone"
         "system.users"
+        "system.gpg"
       ];
     };
   };
