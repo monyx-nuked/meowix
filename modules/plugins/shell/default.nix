@@ -14,10 +14,7 @@
     homeManager.shell = {
       imports = config.flake.lib.resolve_hm [
         "shell.fish"
-        "shell.utils.bat?"
-        "shell.utils.eza?"
-        "shell.utils.rg?"
-        "shell.utils.tldr?"
+        "shell.utils?"
       ];
     };
   };
