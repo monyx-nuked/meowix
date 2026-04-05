@@ -1,6 +1,6 @@
 {
   "recommendations": [
-    "jdinhlife.gruvbox",
+    "catppuccin.catppuccin-vsc",
     "shd101wyy.markdown-preview-enhanced",
     "EditorConfig.EditorConfig",
     "DavidAnson.vscode-markdownlint",
@@ -16,3 +16,4 @@
     "tamasfe.even-better-toml",
   ]
 }
+

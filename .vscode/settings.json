@@ -13,7 +13,7 @@
   "workbench.productIconTheme": "material-product-icons",
   "terminal.integrated.tabs.defaultIcon": "console",
   "editor.tabSize": 2,
-  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.colorTheme": "Catppuccin Mocha",
   "pre-commit-helper.config": ".pre-commit-config.yaml",
   "editor.tokenColorCustomizations": {
     "textMateRules": [
@@ -65,3 +65,4 @@
     }
   },
 }
+
