@@ -69,4 +69,32 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
+  nixConfig = {
+    extra-substituters = [
+      "https://install.determinate.systems"
+      "https://nix-community.cachix.org"
+      "https://devenv.cachix.org"
+      "https://cachix.cachix.org"
+      "https://cache.nixos-cuda.org"
+      "https://meowix-config.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "cache.flakehub.com-3:hJuILl5sVK4iKm86JzgdXW12Y2Hwd5G07qKtHTOcDCM="
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+      "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
+      "cachix.cachix.org-1:eWNHQldwUO7G2VkjpnjDbWwy4KQ/HNxht7H4SSoMckM="
+      "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M="
+      "meowix-config.cachix.org-1:h/vLFLzDtjXK7/PtGI9e/4VoR18ACO+LYe9oZFv7pps="
+    ];
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+    trusted-users = [
+      "root"
+      "@wheel"
+      "monyx"
+    ];
+    accept-flake-config = true;
+  };
 }
