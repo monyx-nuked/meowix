@@ -43,8 +43,8 @@ jobs:
         if: matrix.target == 'nixos'
         # Dynamically builds the hostname from the matrix
         run: |
-          nix build .#nixosConfigurations.${{ matrix.hostname }}.config.system.build.toplevel
+          nix build -L .#nixosConfigurations.${{ matrix.hostname }}.config.system.build.toplevel
       - name: Build DevShell
         if: matrix.target == 'devshell'
         run: |
-          nix build .#devShells.x86_64-linux.default
+          nix build -L .#devShells.x86_64-linux.default
