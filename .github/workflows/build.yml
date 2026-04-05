@@ -6,7 +6,7 @@ on:
     workflow_dispatch:
     push:
         branches:
-          - master
+          - main
           - update_flake_lock_action
         paths-ignore:
           - "README.md"

@@ -9,7 +9,7 @@
         config = [
           {
             init = {
-              defaultBranch = "master";
+              defaultBranch = "main";
             };
           }
           {
@@ -27,7 +27,7 @@
         lfs.enable = true;
         settings = {
           init = {
-            defaultBranch = "master";
+            defaultBranch = "main";
           };
           user = {
             name = config.flake.meta.user.github.username;
