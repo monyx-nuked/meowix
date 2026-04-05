@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager."shell.rg" =
+  flake.modules.homeManager."shell.utils.rg" =
     {
       config,
       lib,

@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager."shell.eza" =
+  flake.modules.homeManager."shell.utils.eza" =
     {
       config,
       lib,
