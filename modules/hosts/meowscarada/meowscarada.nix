@@ -24,7 +24,7 @@ in
         "system.wsl"
         "shell"
         "catppuccin"
-        "secrets.sops"
+        "secrets"
         inputs.nixos-wsl.nixosModules.default
       ];
       home-manager.users.${config.flake.meta.user.username} = {
@@ -34,6 +34,7 @@ in
           "dev"
           "shell"
           "catppuccin"
+          "secrets"
         ];
       };
       networking.hostName = host_name;
