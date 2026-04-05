@@ -1,59 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended",
-    ":semanticCommits",
-    ":semanticCommitTypeAll(chore)"
-  ],
-  "timezone": "Asia/Tashkent",
-  "schedule": [
-    "every day"
-  ],
-  "osvVulnerabilityAlerts": true,
-  "vulnerabilityAlerts": {
-    "labels": [
-      "security"
-    ],
-    "addLabels": [
-      "automated-fix"
-    ]
-  },
-  "dependencyDashboard": true,
-  "nix": {
-    "enabled": true,
-    "managerFilePatterns": [
-      "(^|/)flake\\.nix$"
-    ]
-  },
-  "github-actions": {
-    "enabled": true
-  },
-  "packageRules": [
-    {
-      "matchManagers": [
-        "nix"
-      ],
-      "semanticCommitScope": "nix",
-      "commitMessageTopic": "nix",
-      "commitMessageExtra": "to {{newValue}}"
-    },
-    {
-      "matchManagers": [
-        "github-actions"
-      ],
-      "semanticCommitScope": "ci"
-    },
-    {
-      "matchUpdateTypes": [
-        "vulnerability"
-      ],
-      "enabled": true,
-      "dependencyDashboardApproval": false,
-      "schedule": [
-        "at any time"
-      ],
-      "prPriority": 10,
-      "commitMessagePrefix": "security(deps):"
-    }
+    "config:recommended"
   ]
 }
