@@ -59,6 +59,9 @@
             pkgs.nixfmt # Official formatter for Nix code
             pkgs.shfmt # Shell parser and formatter
             pkgs.convco # Conventional commit cli
+            pkgs.sops # Simple and flexible tool for managing secrets
+            pkgs.age # Modern encryption tool with small explicit keys
+            pkgs.ssh-to-age # Convert ssh private keys in ed25519 format to age keys
           ];
           meta = {
             description = "Development shell made for this project";
