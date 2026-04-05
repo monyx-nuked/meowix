@@ -1,8 +1,6 @@
 {
   flake.modules.homeManager."shell.utils.bat" =
     {
-      config,
-      lib,
       pkgs,
       ...
     }:

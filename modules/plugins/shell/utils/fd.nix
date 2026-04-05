@@ -1,12 +1,5 @@
 {
-  flake.modules.homeManager."shell.utils.fd" =
-    {
-      config,
-      lib,
-      pkgs,
-      ...
-    }:
-    {
-      programs.fd.enable = true;
-    };
+  flake.modules.homeManager."shell.utils.fd" = {
+    programs.fd.enable = true;
+  };
 }

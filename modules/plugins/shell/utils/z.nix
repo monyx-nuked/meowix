@@ -1,12 +1,5 @@
 {
-  flake.modules.homeManager."shell.utils.z" =
-    {
-      config,
-      lib,
-      pkgs,
-      ...
-    }:
-    {
-      programs.zoxide.enable = true;
-    };
+  flake.modules.homeManager."shell.utils.z" = {
+    programs.zoxide.enable = true;
+  };
 }

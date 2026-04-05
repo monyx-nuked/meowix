@@ -1,12 +1,5 @@
 {
-  flake.modules.homeManager."shell.utils.tldr" =
-    {
-      config,
-      lib,
-      pkgs,
-      ...
-    }:
-    {
-      programs.tealdeer.enable = true;
-    };
+  flake.modules.homeManager."shell.utils.tldr" = {
+    programs.tealdeer.enable = true;
+  };
 }

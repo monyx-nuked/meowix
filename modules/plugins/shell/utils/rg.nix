@@ -1,12 +1,5 @@
 {
-  flake.modules.homeManager."shell.utils.rg" =
-    {
-      config,
-      lib,
-      pkgs,
-      ...
-    }:
-    {
-      programs.ripgrep.enable = true;
-    };
+  flake.modules.homeManager."shell.utils.rg" = {
+    programs.ripgrep.enable = true;
+  };
 }
