@@ -14,7 +14,6 @@
     homeManager.shell = {
       imports = config.flake.lib.resolve_hm [
         "shell.fish"
-        "shell.starship"
         "shell.bat"
       ];
     };
