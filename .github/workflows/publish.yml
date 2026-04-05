@@ -16,7 +16,7 @@ jobs:
       - uses: "DeterminateSystems/determinate-nix-action@v3"
       - uses: "DeterminateSystems/flakehub-push@main"
         with:
-          name: "monyx/meowix"
+          name: "monyx-nuked/meowix"
           rolling: true
           visibility: "unlisted"
           include-output-paths: true
