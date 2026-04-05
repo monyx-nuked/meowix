@@ -15,6 +15,7 @@
       imports = config.flake.lib.resolve_hm [
         "shell.fish"
         "shell.bat?"
+        "shell.eza?"
       ];
     };
   };
