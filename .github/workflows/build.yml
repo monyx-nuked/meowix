@@ -1,0 +1,47 @@
+name: "Build configurations"
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-nixos:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: "write" # Required for Determinate magic-cache
+      contents: "read"
+    strategy:
+      fail-fast: false # Don't cancel other builds if one machine fails
+      matrix:
+        # List your nixosConfigurations names here
+        target: [nixos, devshell]
+        hostname: [meowscarada]
+
+    steps:
+      - name: Get the repo
+        uses: actions/checkout@v6.0.2
+
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@main
+
+      - name: Magic Nix Cache
+        uses: DeterminateSystems/magic-nix-cache-action@v13
+
+      - name: Setup Cachix
+        uses: cachix/cachix-action@v17
+        with:
+          name: meowix-config
+          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+          extraPullNames: nix-community,devenv,cachix
+
+      - name: Build System
+        if: matrix.target == 'nixos'
+        # Dynamically builds the hostname from the matrix
+        run: |
+          nix build .#nixosConfigurations.${{ matrix.hostname }}.config.system.build.toplevel
+      - name: Build DevShell
+        if: matrix.target == 'devshell'
+        run: |
+          nix build .#devShells.x86_64-linux.default
