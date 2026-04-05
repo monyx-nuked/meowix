@@ -44,7 +44,7 @@ let
         #   Global modules are imported first-class so some options aren't missing
         #   There is possible way to import for each file but it is annoying
         inherit (inputs.catppuccin.homeModules) catppuccin;
-        inherit (inputs.catppuccin.homeModules) sops;
+        inherit (inputs.sops-nix.homeModules) sops;
         nur = inputs.nur.modules.homeManager.default;
         nix-index = inputs.nix-index-database.homeModules.default;
       };
