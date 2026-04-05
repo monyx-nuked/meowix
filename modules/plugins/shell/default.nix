@@ -17,6 +17,7 @@
         "shell.utils.bat?"
         "shell.utils.eza?"
         "shell.utils.rg?"
+        "shell.utils.tldr?"
       ];
     };
   };
