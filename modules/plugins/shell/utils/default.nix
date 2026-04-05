@@ -23,6 +23,7 @@
         # Disabled because for WSL ( can be enabled regardless )
         # "shell.utils.rga?"
         "shell.utils.delta?"
+        "shell.utils.dust?"
       ];
     };
   };
