@@ -1,0 +1,70 @@
+name: NixOS
+concurrency: nixos
+
+on:
+    pull_request:
+    workflow_dispatch:
+    push:
+        branches:
+          - master
+          - reconstruct
+        paths-ignore:
+          - "README.md"
+          - ".gitignore"
+jobs:
+    build-necrozma:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Free Disk Space (Ubuntu)
+            uses: thiagokokada/free-disk-space@main
+            with:
+                tool-cache: true
+                usrmisc: true
+                usrlocal: true
+                opt: true
+                varcache: true
+
+          - uses: actions/checkout@v6.0.2
+
+          - name: "Install Nix ❄"
+            uses: DeterminateSystems/determinate-nix-action@v3.17.2
+
+          - name: "Install Cachix ❄"
+            uses: cachix/cachix-action@v17
+            with:
+                name: monyx-nix-config
+                authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
+
+          - name: "Build WSL NixOS config ❄"
+            run: |
+                nix build .#nixosConfigurations.meowscarada.config.system.build.toplevel \
+                  -L \
+                  --accept-flake-config
+    build-devenv:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Free Disk Space (Ubuntu)
+            uses: thiagokokada/free-disk-space@main
+            with:
+                tool-cache: true
+                usrmisc: true
+                usrlocal: true
+                opt: true
+                varcache: true
+
+          - uses: actions/checkout@v6.0.2
+
+          - name: "Install Nix ❄"
+            uses: DeterminateSystems/determinate-nix-action@v3.17.2
+
+          - name: "Install Cachix ❄"
+            uses: cachix/cachix-action@v17
+            with:
+                name: monyx-nix-config
+                authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
+
+          - name: "Build devenv shell config (x86_64-linux) ❄"
+            run: |
+                nix build .#devShells.x86_64-linux.default \
+                  -L \
+                  --accept-flake-config
