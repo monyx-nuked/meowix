@@ -3,17 +3,17 @@
   flake.modules = {
     nixos.secrets = {
       imports = config.flake.lib.resolve [
-        "system.sops"
+        "secrets.sops"
       ];
     };
     homeManager.secrets = {
       imports = config.flake.lib.resolve_hm [
-        "system.sops"
+        "secrets.sops"
       ];
     };
     darwin.secrets = {
       imports = config.flake.lib.resolve_darwin [
-        "system.sops"
+        "secrets.sops"
       ];
     };
   };
