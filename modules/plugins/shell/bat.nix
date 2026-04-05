@@ -9,7 +9,13 @@
     {
       programs.bat = {
         enable = true;
-        extraPackages = [ pkgs.bat ];
+        extraPackages = [
+          pkgs.glow
+          pkgs.batman
+          pkgs.batdiff
+          pkgs.batgrep
+          pkgs.batwatch
+        ];
       };
       catppuccin.bat = {
         enable = true;
