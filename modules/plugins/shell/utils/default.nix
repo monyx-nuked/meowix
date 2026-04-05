@@ -20,6 +20,7 @@
         "shell.utils.z?"
         "shell.utils.fzf?"
         "shell.utils.fd?"
+        "shell.utils.rga?"
       ];
     };
   };
