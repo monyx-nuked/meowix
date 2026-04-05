@@ -16,10 +16,11 @@ let
         #   Global modules are imported first-class so some options aren't missing
         #   There is possible way to import for each file but it is annoying
         inherit (inputs.home-manager.nixosModules) home-manager;
+        inherit (inputs.catppuccin.nixosModules) catppuccin;
+        inherit (inputs.sops-nix.nixosModules) sops;
         determinate = inputs.determinate.nixosModules.default;
         nur = inputs.nur.modules.nixos.default;
         nix-index = inputs.nix-index-database.nixosModules.default;
-        inherit (inputs.catppuccin.nixosModules) catppuccin;
       };
     };
     darwin = {
@@ -31,6 +32,7 @@ let
         #   Global modules are imported first-class so some options aren't missing
         #   There is possible way to import for each file but it is annoying
         inherit (inputs.home-manager.darwinModules) home-manager;
+        inherit (inputs.sops-nix.darwinModules) sops;
         nur = inputs.nur.modules.darwin.default;
         nix-index = inputs.nix-index-database.darwinModules.default;
       };
@@ -41,9 +43,10 @@ let
         # Global modules:
         #   Global modules are imported first-class so some options aren't missing
         #   There is possible way to import for each file but it is annoying
+        inherit (inputs.catppuccin.homeModules) catppuccin;
+        inherit (inputs.catppuccin.homeModules) sops;
         nur = inputs.nur.modules.homeManager.default;
         nix-index = inputs.nix-index-database.homeModules.default;
-        inherit (inputs.catppuccin.homeModules) catppuccin;
       };
     };
   };
