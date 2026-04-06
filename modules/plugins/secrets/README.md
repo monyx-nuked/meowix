@@ -1,5 +1,4 @@
 note about key.txt
 ==================
 
-the file should be DIRECTLY symlinked to /etc/sops-nix/key.txt \
-if on darwin please re-symlink it then switch to the configuration
+Please get the key from PPass and put it in /var/lib/sops-nix/key.txt
