@@ -14,6 +14,7 @@
     homeManager.dev = {
       imports = config.flake.lib.resolve_hm [
         "dev.direnv"
+        "dev.uv"
       ];
     };
   };
