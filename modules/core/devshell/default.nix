@@ -62,6 +62,7 @@
             pkgs.sops # Simple and flexible tool for managing secrets
             pkgs.age # Modern encryption tool with small explicit keys
             pkgs.ssh-to-age # Convert ssh private keys in ed25519 format to age keys
+            pkgs.uv # Extremely fast Python package installer and resolver, written in Rust
           ];
           meta = {
             description = "Development shell made for this project";
