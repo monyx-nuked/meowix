@@ -8,7 +8,9 @@ let
       username = "monyx-nuked";
       repo = "meowix";
     };
-    ssh.authorizedKeys = [ "" ];
+    ssh.authorizedKeys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDKgQ9DA22OYc+x0TOVqzGIXYQQudAdS9WPEe6y8S3VX monyx@meowscarada"
+    ];
     gpg = {
       fingerprint = "86D7 F83B 3BCF 74D7 D0C4  752C F15B 6116 3CFC EBDD";
       publicKeyFile = inputs.self + /config/gpg/public_key.asc;
