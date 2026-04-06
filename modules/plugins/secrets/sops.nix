@@ -1,13 +1,15 @@
 { inputs, ... }:
 let
+  # flake_config = config;
   key_file = "/var/lib/sops-nix/key.txt";
+  # user = flake_config.flake.meta.user.username;
 in
 {
   flake.modules = {
     nixos."secrets.sops" =
       # { config, ... }:
       # let
-      # nixos_config = config;
+      #   nixos_config = config;
       # in
       {
         sops = {
@@ -43,7 +45,7 @@ in
             generateKey = true;
           };
           secrets = {
-            # TODO: Add something
+            # Add something
           };
         };
       };
@@ -61,7 +63,10 @@ in
             generateKey = true;
           };
           secrets = {
-            # TODO: Add something
+            ssh_private = {
+              path = "${hm_config.home.homeDirectory}/.ssh/id_ed25519";
+              mode = "0600";
+            };
           };
         };
       };
