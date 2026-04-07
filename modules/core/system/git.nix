@@ -16,7 +16,7 @@
             user = {
               name = config.flake.meta.user.github.username;
               inherit (config.flake.meta.user) email;
-              signingKey = "073E3C156F150245\!";
+              signingKey = "073E3C156F150245";
             };
           }
           {
