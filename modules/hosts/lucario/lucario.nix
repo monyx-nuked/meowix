@@ -38,7 +38,11 @@ in
           "etc"
         ];
       };
-      networking.hostName = host_name;
+      boot.loader.systemd-boot.enable = true;
+      networking = {
+        hostName = host_name;
+        networkmanager.enable = true;
+      };
       system.stateVersion = host_meta.stateversion.nixos;
       nixpkgs.hostPlatform = "x86_64-linux";
     };
