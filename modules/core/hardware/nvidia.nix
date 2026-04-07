@@ -24,9 +24,6 @@ in
             libvdpau-va-gl # For VDPAU-Only apps
           ];
         };
-        environment.systemPackages = [
-          pkgs.nvtopPackages.full # Install nvtop for both GPU support
-        ];
         nvidia = {
           open = true;
           # Configure PRIME Settings in host-specific module
@@ -34,5 +31,8 @@ in
           package = config.boot.kernelPackages.nvidiaPackages.production;
         };
       };
+      environment.systemPackages = [
+        pkgs.nvtopPackages.full # Install nvtop for both GPU support
+      ];
     };
 }
