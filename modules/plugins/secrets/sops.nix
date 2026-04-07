@@ -67,6 +67,10 @@ in
               path = "${hm_config.home.homeDirectory}/.ssh/id_ed25519";
               mode = "0600";
             };
+            ssh_public = {
+              path = "${hm_config.home.homeDirectory}/.ssh/id_ed25519.pub";
+              mode = "0600";
+            };
           };
         };
       };
