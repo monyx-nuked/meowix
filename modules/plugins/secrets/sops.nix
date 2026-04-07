@@ -20,14 +20,6 @@ in
             generateKey = true;
           };
           secrets = {
-            user_password = {
-              mode = "0400";
-              neededForUsers = true;
-            };
-            root_password = {
-              mode = "0400";
-              neededForUsers = true;
-            };
           };
         };
       };

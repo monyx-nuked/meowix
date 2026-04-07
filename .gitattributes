@@ -3,3 +3,4 @@
 
 # Sops
 secrets/*.yaml diff=sopsdiffer
+*.qcow2 type=binary

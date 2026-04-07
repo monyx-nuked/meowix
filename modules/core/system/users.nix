@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, inputs, ... }:
 let
   top_config = config;
 in
@@ -13,14 +13,16 @@ in
       }:
       {
         users = {
-          mutableUsers = true;
+          mutableUsers = false;
           users = {
             root = {
               isSystemUser = true;
-              hashedPasswordFile = config.sops.secrets."root_password".path;
+              initialPassword = "meowix";
+              hashedPasswordFile = inputs.self + /secrets/root_password;
             };
             ${top_config.flake.meta.user.username} = {
-              hashedPasswordFile = config.sops.secrets."user_password".path;
+              initialPassword = "meowix";
+              hashedPasswordFile = inputs.self + /secrets/user_password;
               isNormalUser = true;
               description = top_config.flake.meta.user.full.name;
               openssh.authorizedKeys.keys = top_config.flake.meta.user.ssh.authorizedKeys;
