@@ -4,7 +4,7 @@
       { config, ... }:
       {
         # Disable wait-online
-        systemd.network.wait-online.enable = !config.networking.networkmanager.enable;
+        systemd.network.wait-online.enable = false;
         networking = {
           networkmanager = {
             insertNameservers = [
