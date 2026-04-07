@@ -17,11 +17,9 @@ in
           users = {
             root = {
               isSystemUser = true;
-              initialPassword = "meowix";
               hashedPasswordFile = inputs.self + /secrets/root_password;
             };
             ${top_config.flake.meta.user.username} = {
-              initialPassword = "meowix";
               hashedPasswordFile = inputs.self + /secrets/user_password;
               isNormalUser = true;
               description = top_config.flake.meta.user.full.name;
