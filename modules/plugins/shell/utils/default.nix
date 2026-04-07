@@ -27,6 +27,7 @@
         "shell.utils.dua?"
         "shell.utils.just?"
         "shell.utils.xh?"
+        "shell.utils.hyperfine?"
       ];
     };
   };
