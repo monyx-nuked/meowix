@@ -15,6 +15,10 @@
       wrapBinSh = true;
       wslConf = {
         automount.enabled = true; # Enable because interop needs it
+        wsl2 = {
+          nestedVirtualization = true; # Enable for VMs
+          guiApplications = true; # Enable for Gooey
+        };
       };
     };
   };
