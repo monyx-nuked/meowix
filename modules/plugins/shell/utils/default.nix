@@ -24,6 +24,7 @@
         # "shell.utils.rga?"
         "shell.utils.delta?"
         "shell.utils.dust?"
+        "shell.utils.dua?"
         "shell.utils.just?"
         "shell.utils.xh?"
       ];
