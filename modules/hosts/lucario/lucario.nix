@@ -1,11 +1,11 @@
-{ inputs, config, ... }:
+{ config, ... }:
 let
   prefix = "hosts.";
-  host_name = "meowscarada";
+  host_name = "lucario";
   host_meta = {
     name = host_name;
-    ssh.alias = "wsl";
-    tailscale.enable = false;
+    ssh.alias = "main";
+    tailscale.enable = true;
     stateversion = {
       nixos = "25.11";
       home = "25.11";
@@ -17,15 +17,15 @@ in
     meta = {
       hosts = [ host_meta ];
       unfree.enable = true;
+      cuda.enable = true;
     };
     modules.nixos."${prefix}${host_name}" = {
       imports = config.flake.lib.resolve [
         "system"
-        "system.wsl"
         "shell"
+        "catppuccin"
         "secrets"
         "etc"
-        inputs.nixos-wsl.nixosModules.default
       ];
       home-manager.users.${config.flake.meta.user.username} = {
         home.stateVersion = host_meta.stateversion.home;
@@ -33,6 +33,7 @@ in
           "system"
           "dev"
           "shell"
+          "catppuccin"
           "secrets"
           "etc"
         ];
