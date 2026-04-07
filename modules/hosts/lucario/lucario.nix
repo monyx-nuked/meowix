@@ -18,12 +18,13 @@ in
       hosts = [ host_meta ];
       unfree.enable = true;
       cuda.enable = true;
+      intel_driver.enable = true;
+      nvidia_driver.enable = true;
     };
     modules.nixos."${prefix}${host_name}" = {
       imports = config.flake.lib.resolve [
         "system"
         "shell"
-        "catppuccin"
         "secrets"
         "etc"
       ];
@@ -33,7 +34,6 @@ in
           "system"
           "dev"
           "shell"
-          "catppuccin"
           "secrets"
           "etc"
         ];

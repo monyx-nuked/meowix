@@ -186,6 +186,18 @@ in
       description = "Dashboard of managed hosts";
     };
 
+    nvidia_driver = mkOption {
+      type = enable_submodule;
+      default = { };
+      description = "NVIDIA GPU toggle";
+    };
+
+    intel_driver = mkOption {
+      type = enable_submodule;
+      default = { };
+      description = "Intel GPU toggle";
+    };
+
     cuda = mkOption {
       type = enable_submodule;
       default = { };
@@ -202,6 +214,8 @@ in
   config.flake.meta = {
     inherit user;
     unfree.enable = lib.mkDefault true;
+    nvidia_driver.enable = lib.mkDefault false;
+    intel_driver.enable = lib.mkDefault false;
     cuda.enable = lib.mkDefault false;
   };
 }
