@@ -1,7 +1,7 @@
 { config, ... }:
 {
   flake.modules = {
-    nixos.system = {
+    nixos."system.minimum" = {
       imports = config.flake.lib.resolve [
         "system.home-manager"
         "system.locale"
@@ -13,7 +13,7 @@
         "system.gpg"
       ];
     };
-    homeManager.system = {
+    homeManager."system.minimum" = {
       imports = config.flake.lib.resolve_hm [
         "system.nix"
         "system.users"
@@ -21,7 +21,7 @@
         "system.gpg"
       ];
     };
-    darwin.system = {
+    darwin."system.minimum" = {
       imports = config.flake.lib.resolve_darwin [
         "system.home-manager"
         "system.nh"
