@@ -23,7 +23,9 @@ in
     };
     modules.nixos."${prefix}${host_name}" = {
       imports = config.flake.lib.resolve [
-        "system"
+        "system.minimum"
+        "system.boot"
+        "system.network"
         "shell"
         "secrets"
         "etc"
@@ -31,7 +33,7 @@ in
       home-manager.users.${config.flake.meta.user.username} = {
         home.stateVersion = host_meta.stateversion.home;
         imports = config.flake.lib.resolve_hm [
-          "system"
+          "system.minimum"
           "dev"
           "shell"
           "secrets"
