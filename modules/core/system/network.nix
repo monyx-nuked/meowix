@@ -14,9 +14,7 @@
             wifi.backend = "iwd";
             dhcp = "internal";
           };
-          dhcpcd = {
-            inherit (config.networking.networkmanager) enable;
-          };
+          dhcpcd.enable = !config.networking.networkmanager.enable;
           wireless.iwd = {
             inherit (config.networking.networkmanager) enable;
             settings.Settings.AutoConnect = true;
