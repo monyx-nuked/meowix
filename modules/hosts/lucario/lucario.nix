@@ -26,7 +26,7 @@ in
         "system.minimum"
         "system.boot"
         "system.network"
-        "system.tty"
+        "system.console"
         "shell"
         "secrets"
         "etc"
