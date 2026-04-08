@@ -15,6 +15,7 @@
       imports = config.flake.lib.resolve_hm [
         "dev.direnv"
         "dev.uv"
+        "dev.gemini"
       ];
     };
   };

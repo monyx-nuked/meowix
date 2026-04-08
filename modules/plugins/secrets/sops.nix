@@ -63,6 +63,9 @@ in
               path = "${hm_config.home.homeDirectory}/.ssh/id_ed25519.pub";
               mode = "0600";
             };
+            gemini_cli_api_key = {
+              mode = "0600";
+            };
           };
         };
       };
