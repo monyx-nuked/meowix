@@ -41,7 +41,7 @@ in
           "etc"
         ];
       };
-      boot.loader.systemd-boot.enable = true;
+      # boot.loader.systemd-boot.enable = true;
       networking = {
         hostName = host_name;
         networkmanager.enable = true;
