@@ -14,8 +14,10 @@
         mpris-proxy.enable = true;
       };
     };
-    homeManager."system.bluetooth" = {
-      services.bluetuith.enable = true;
-    };
+    homeManager."system.bluetooth" =
+      { lib, ... }:
+      {
+        services.bluetuith.enable = lib.mkDefault true;
+      };
   };
 }
