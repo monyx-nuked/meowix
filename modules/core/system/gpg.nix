@@ -1,4 +1,3 @@
-{ config, ... }:
 {
   flake.modules = {
     nixos."system.gpg" =
@@ -15,12 +14,6 @@
     homeManager."system.gpg" = {
       programs.gpg = {
         enable = true;
-        publicKeys = [
-          {
-            source = config.flake.meta.user.gpg.publicKeyFile;
-            trust = "ultimate";
-          }
-        ];
       };
     };
     darwin."system.gpg" = {
